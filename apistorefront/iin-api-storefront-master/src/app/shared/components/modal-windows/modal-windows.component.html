@@ -81,6 +81,7 @@
       <div class="inputs"
         [ngClass]="{'error': submitted && f.group.errors}">
         <input type="text" placeholder="Group Name"
+          pattern="^\S+(?: \S+)*$"
           formControlName="group"/>
       </div>
     </div>
@@ -107,6 +108,7 @@
       <div class="inputs"
         [ngClass]="{'error': submitted && f.endpoint.errors}">
         <input type="text" placeholder="Endpoint Value"
+          pattern="^\S+(?: \S+)*$"
           formControlName="endpoint"/>
       </div>
     </div>
@@ -135,6 +137,7 @@
       <div class="inputs"
         [ngClass]="{'error': submitted && f.method.errors}">
         <input type="text" placeholder="Method Name"
+          pattern="^\S+(?: \S+)*$"
           formControlName="method"/>
       </div>
     </div>
@@ -144,6 +147,7 @@
       <div class="textareas small"
         [ngClass]="{'error': submitted && f.description.errors}">
         <textarea placeholder="Description" maxlength="200"
+          pattern="^\S+(?: \S+)*$"
           formControlName="description">
         </textarea>
       </div>
@@ -171,6 +175,7 @@
       <div class="inputs"
         [ngClass]="{'error': submitted && f.key.errors}">
         <input type="text" placeholder="Key"
+          pattern="^\S+(?: \S+)*$"
           formControlName="key"/>
       </div>
     </div>
@@ -180,6 +185,7 @@
       <div class="inputs"
         [ngClass]="{'error': submitted && f.value.errors}">
         <input type="text" placeholder="Value"
+          pattern="^\S+(?: \S+)*$"
           formControlName="value"/>
       </div>
     </div>
