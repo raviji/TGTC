@@ -1,0 +1,179 @@
+{
+  "api-calls": {
+    "data": [
+      {
+        "date": "1/1/2017",
+        "andriodNumber": 120,
+        "paymentNumber": 30
+      },
+      {
+        "date": "2/1/2017",
+        "andriodNumber": 105,
+        "paymentNumber": 70
+      },
+      {
+        "date": "3/1/2017",
+        "andriodNumber": 120,
+        "paymentNumber": 50
+      },
+      {
+        "date": "4/1/2017",
+        "andriodNumber": 173,
+        "paymentNumber": 150
+      },
+      {
+        "date": "5/1/2017",
+        "andriodNumber": 90,
+        "paymentNumber": 130
+      },
+      {
+        "date": "6/1/2017",
+        "andriodNumber": 140,
+        "paymentNumber": 148
+      }
+    ]
+  },
+  "no error statistic": {
+    "title": "96,99%",
+    "data": [
+      {
+        "date": "1/1/2017",
+        "andriodNumber": 0.970,
+        "paymentNumber": 0.945
+      },
+      {
+        "date": "2/1/2017",
+        "andriodNumber": 0.958,
+        "paymentNumber": 0.953
+      },
+      {
+        "date": "3/1/2017",
+        "andriodNumber": 0.968,
+        "paymentNumber": 0.950
+      },
+      {
+        "date": "4/1/2017",
+        "andriodNumber": 0.999,
+        "paymentNumber": 0.990
+      },
+      {
+        "date": "5/1/2017",
+        "andriodNumber": 0.955,
+        "paymentNumber": 0.976
+      },
+      {
+        "date": "6/1/2017",
+        "andriodNumber": 0.975,
+        "paymentNumber": 0.984
+      }
+    ]
+  },
+  "revenue": {
+    "title": "$3,321",
+    "data": [
+      {
+        "date": "1/1/2017",
+        "andriodNumber": 880,
+        "paymentNumber": 350
+      },
+      {
+        "date": "2/1/2017",
+        "andriodNumber": 750,
+        "paymentNumber": 650
+      },
+      {
+        "date": "3/1/2017",
+        "andriodNumber": 850,
+        "paymentNumber": 500
+      },
+      {
+        "date": "4/1/2017",
+        "andriodNumber": 1500,
+        "paymentNumber": 1200
+      },
+      {
+        "date": "5/1/2017",
+        "andriodNumber": 650,
+        "paymentNumber": 950
+      },
+      {
+        "date": "6/1/2017",
+        "andriodNumber": 920,
+        "paymentNumber": 1050
+      }
+    ]
+  },
+  "latency": {
+    "title": "10 ms",
+    "data": [
+      {
+        "date": "1/1/2017",
+        "andriodNumber": 18,
+        "paymentNumber": 8
+      },
+      {
+        "date": "2/1/2017",
+        "andriodNumber": 14,
+        "paymentNumber": 12
+      },
+      {
+        "date": "3/1/2017",
+        "andriodNumber": 17,
+        "paymentNumber": 10
+      },
+      {
+        "date": "4/1/2017",
+        "andriodNumber": 25,
+        "paymentNumber": 22
+      },
+      {
+        "date": "5/1/2017",
+        "andriodNumber": 13,
+        "paymentNumber": 19
+      },
+      {
+        "date": "6/1/2017",
+        "andriodNumber": 18,
+        "paymentNumber": 21
+      }
+    ]
+  },
+  "error event trends": {
+    "titleError": "75",
+    "titleSmallError": "-3.8%",
+    "titleUser affected": "33",
+    "titleSmallUser affected": "-13,2%",
+    "data": [
+      {
+        "date": "1/1/2017",
+        "andriodNumber": 8,
+        "paymentNumber": 12
+      },
+      {
+        "date": "2/1/2017",
+        "andriodNumber": 8,
+        "paymentNumber": 12
+      },
+      {
+        "date": "3/1/2017",
+        "andriodNumber": 8,
+        "paymentNumber": 12
+      },
+      {
+        "date": "4/1/2017",
+        "andriodNumber": 7,
+        "paymentNumber": 12
+      },
+      {
+        "date": "5/1/2017",
+        "andriodNumber": 8,
+        "paymentNumber": 12
+      },
+      {
+        "date": "6/1/2017",
+        "andriodNumber": 8,
+        "paymentNumber": 12
+      }
+    ]
+  }
+}

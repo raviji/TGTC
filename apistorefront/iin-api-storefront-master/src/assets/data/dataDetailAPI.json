@@ -1,0 +1,348 @@
+[
+  {
+    "banner": {
+      "title": "Risk Scoring",
+      "description": "Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern. Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+      "imgUrl": "/assets/i/investment.svg"
+    },
+    "description": {
+      "apiRating": 5,
+      "provider": "INDODARMA GROUP",
+      "contactInformation": "(+1) 6755 8755 - indodarma@techno.com",
+      "totalDownloads": "1.334.878 Downloads",
+      "paragraphs": [
+        {
+          "content": "Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "content": "Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "content": "Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+      ]
+    },
+    "keyFeaturesBenefits": {
+      "idVveification": "Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim",
+      "paymentBehavior": "Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "lengthOfStay": "Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim"
+    },
+    "apiSpecification": {
+      "schemes": "HTTPS",
+      "list": [
+        {
+          "type": "GET",
+          "url": "/*",
+          "parameters": [
+            {
+              "name": "phoneNumber",
+              "type": "string",
+              "isRequired": true,
+              "tips": "query"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            }
+          ],
+          "responses": {
+            "responsesContentType": "application/json",
+            "code": "200",
+            "description": "{\n  \"Length_of_Stay\": \"string\",\n  \"Email\": \"string\",\n  \"Address\": \"string\",\n  \"Match_Name\": \"string\",\n  \"Internet_Usage\": \"string\",\n  \"Telco_Risk\": \"string\",\n  \"Payment_Behavior\": \"string\",\n  \"Mobile\": \"string\",\n  \"Payment_Type\": \"string\",\n  \"Name\": \"string\",\n  \"Telp\": \"string\",\n  \"Match_Mobile\": \"string\",\n  \"Match_Address\": \"string\",\n  \"Match_Email\": \"string\",\n  \"Browsing_Category\": \"string\",\n  \"Match_Telp\": \"string\",\n  \"SES_ARPU\": \"string\"\n}"
+          },
+          "generatedCodeSnippets": {
+            "programmingLanguage": "Swift",
+            "description": "import Foundation\n\nlet headers = [\n\"content-type\": \"multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW\",\n\"cache-control\": \"no-cache\",\n\"postman-token\": \"b6a92f84-4ca4-a400-c507-e6c0fdc54ed8\"\n]\nlet parameters = [\n[\n\"name\": \"code\",\n\"value\": \"xWnkliVQJURqB2x1\"\n],\n[\n\"name\": \"grant_type\",\n\"value\": \"authorization_code\"\n],\n[\n\"name\": \"redirect_uri\",\n\"value\": \"https://www.getpostman.com/oauth2/callback\"\n],\n"
+          }
+        },
+        {
+          "type": "POST",
+          "url": "/transactions",
+          "parameters": [
+            {
+              "name": "phoneNumber",
+              "type": "string",
+              "isRequired": true,
+              "tips": "query"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            }
+          ],
+          "responses": {
+            "responsesContentType": "application/json",
+            "code": "200",
+            "description": "{\n  \"Length_of_Stay\": \"string\",\n  \"Email\": \"string\",\n  \"Address\": \"string\",\n  \"Match_Name\": \"string\",\n  \"Internet_Usage\": \"string\",\n  \"Telco_Risk\": \"string\",\n  \"Payment_Behavior\": \"string\",\n  \"Mobile\": \"string\",\n  \"Payment_Type\": \"string\",\n  \"Name\": \"string\",\n  \"Telp\": \"string\",\n  \"Match_Mobile\": \"string\",\n  \"Match_Address\": \"string\",\n  \"Match_Email\": \"string\",\n  \"Browsing_Category\": \"string\",\n  \"Match_Telp\": \"string\",\n  \"SES_ARPU\": \"string\"\n}"
+          },
+          "generatedCodeSnippets": {
+            "programmingLanguage": "Swift",
+            "description": "import Foundation\n\nlet headers = [\n\"content-type\": \"multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW\",\n\"cache-control\": \"no-cache\",\n\"postman-token\": \"b6a92f84-4ca4-a400-c507-e6c0fdc54ed8\"\n]\nlet parameters = [\n[\n\"name\": \"code\",\n\"value\": \"xWnkliVQJURqB2x1\"\n],\n[\n\"name\": \"grant_type\",\n\"value\": \"authorization_code\"\n],\n[\n\"name\": \"redirect_uri\",\n\"value\": \"https://www.getpostman.com/oauth2/callback\"\n],\n"
+          }
+        },
+        {
+          "type": "POST",
+          "url": "/check-transactions",
+          "parameters": [
+            {
+              "name": "phoneNumber",
+              "type": "string",
+              "isRequired": true,
+              "tips": "query"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            }
+          ],
+          "responses": {
+            "responsesContentType": "application/json",
+            "code": "200",
+            "description": "{\n  \"Length_of_Stay\": \"string\",\n  \"Email\": \"string\",\n  \"Address\": \"string\",\n  \"Match_Name\": \"string\",\n  \"Internet_Usage\": \"string\",\n  \"Telco_Risk\": \"string\",\n  \"Payment_Behavior\": \"string\",\n  \"Mobile\": \"string\",\n  \"Payment_Type\": \"string\",\n  \"Name\": \"string\",\n  \"Telp\": \"string\",\n  \"Match_Mobile\": \"string\",\n  \"Match_Address\": \"string\",\n  \"Match_Email\": \"string\",\n  \"Browsing_Category\": \"string\",\n  \"Match_Telp\": \"string\",\n  \"SES_ARPU\": \"string\"\n}"
+          },
+          "generatedCodeSnippets": {
+            "programmingLanguage": "Swift",
+            "description": "import Foundation\n\nlet headers = [\n\"content-type\": \"multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW\",\n\"cache-control\": \"no-cache\",\n\"postman-token\": \"b6a92f84-4ca4-a400-c507-e6c0fdc54ed8\"\n]\nlet parameters = [\n[\n\"name\": \"code\",\n\"value\": \"xWnkliVQJURqB2x1\"\n],\n[\n\"name\": \"grant_type\",\n\"value\": \"authorization_code\"\n],\n[\n\"name\": \"redirect_uri\",\n\"value\": \"https://www.getpostman.com/oauth2/callback\"\n],\n"
+          }
+        }
+      ]
+    },
+    "pricing": [
+      {
+        "subscriptionPrice": "19",
+        "planName": "12.000 Query",
+        "planDescriptions": "No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is."
+      },
+      {
+        "subscriptionPrice": "199",
+        "planName": "1M Query",
+        "planDescriptions": "No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is."
+      },
+      {
+        "subscriptionPrice": "19",
+        "planName": "12.000 Query",
+        "planDescriptions": "No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is."
+      },
+      {
+        "subscriptionPrice": "19",
+        "planName": "12.000 Query",
+        "planDescriptions": "No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is."
+      }
+    ]
+  },
+  {
+    "banner": {
+      "title": "Big Query Image API",
+      "description": "Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern. Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+      "imgUrl": "/assets/i/server.svg"
+    },
+    "description": {
+      "apiRating": 5,
+      "provider": "INDODARMA GROUP",
+      "contactInformation": "(+1) 6755 8755 - indodarma@techno.com",
+      "totalDownloads": "1.334.878 Downloads",
+      "paragraphs": [
+        {
+          "content": "Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "content": "Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "content": "Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+      ]
+    },
+    "keyFeaturesBenefits": {
+      "idVveification": "Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim",
+      "paymentBehavior": "Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "lengthOfStay": "Risk Scoring is a service product that provides information of customer risk profile based on their payment pattern. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim"
+    },
+    "apiSpecification": {
+      "schemes": "HTTPS",
+      "list": [
+        {
+          "type": "GET",
+          "url": "/*",
+          "parameters": [
+            {
+              "name": "phoneNumber",
+              "type": "string",
+              "isRequired": true,
+              "tips": "query"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            }
+          ],
+          "responses": {
+            "responsesContentType": "application/json",
+            "code": "200",
+            "description": "{\n  \"Length_of_Stay\": \"string\",\n  \"Email\": \"string\",\n  \"Address\": \"string\",\n  \"Match_Name\": \"string\",\n  \"Internet_Usage\": \"string\",\n  \"Telco_Risk\": \"string\",\n  \"Payment_Behavior\": \"string\",\n  \"Mobile\": \"string\",\n  \"Payment_Type\": \"string\",\n  \"Name\": \"string\",\n  \"Telp\": \"string\",\n  \"Match_Mobile\": \"string\",\n  \"Match_Address\": \"string\",\n  \"Match_Email\": \"string\",\n  \"Browsing_Category\": \"string\",\n  \"Match_Telp\": \"string\",\n  \"SES_ARPU\": \"string\"\n}"
+          },
+          "generatedCodeSnippets": {
+            "programmingLanguage": "Swift",
+            "description": "import Foundation\n\nlet headers = [\n\"content-type\": \"multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW\",\n\"cache-control\": \"no-cache\",\n\"postman-token\": \"b6a92f84-4ca4-a400-c507-e6c0fdc54ed8\"\n]\nlet parameters = [\n[\n\"name\": \"code\",\n\"value\": \"xWnkliVQJURqB2x1\"\n],\n[\n\"name\": \"grant_type\",\n\"value\": \"authorization_code\"\n],\n[\n\"name\": \"redirect_uri\",\n\"value\": \"https://www.getpostman.com/oauth2/callback\"\n],\n"
+          }
+        },
+        {
+          "type": "POST",
+          "url": "/transactions",
+          "parameters": [
+            {
+              "name": "phoneNumber",
+              "type": "string",
+              "isRequired": true,
+              "tips": "query"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            }
+          ],
+          "responses": {
+            "responsesContentType": "application/json",
+            "code": "200",
+            "description": "{\n  \"Length_of_Stay\": \"string\",\n  \"Email\": \"string\",\n  \"Address\": \"string\",\n  \"Match_Name\": \"string\",\n  \"Internet_Usage\": \"string\",\n  \"Telco_Risk\": \"string\",\n  \"Payment_Behavior\": \"string\",\n  \"Mobile\": \"string\",\n  \"Payment_Type\": \"string\",\n  \"Name\": \"string\",\n  \"Telp\": \"string\",\n  \"Match_Mobile\": \"string\",\n  \"Match_Address\": \"string\",\n  \"Match_Email\": \"string\",\n  \"Browsing_Category\": \"string\",\n  \"Match_Telp\": \"string\",\n  \"SES_ARPU\": \"string\"\n}"
+          },
+          "generatedCodeSnippets": {
+            "programmingLanguage": "Swift",
+            "description": "import Foundation\n\nlet headers = [\n\"content-type\": \"multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW\",\n\"cache-control\": \"no-cache\",\n\"postman-token\": \"b6a92f84-4ca4-a400-c507-e6c0fdc54ed8\"\n]\nlet parameters = [\n[\n\"name\": \"code\",\n\"value\": \"xWnkliVQJURqB2x1\"\n],\n[\n\"name\": \"grant_type\",\n\"value\": \"authorization_code\"\n],\n[\n\"name\": \"redirect_uri\",\n\"value\": \"https://www.getpostman.com/oauth2/callback\"\n],\n"
+          }
+        },
+        {
+          "type": "POST",
+          "url": "/check-transactions",
+          "parameters": [
+            {
+              "name": "phoneNumber",
+              "type": "string",
+              "isRequired": true,
+              "tips": "query"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            },
+            {
+              "name": "address",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "isRequired": false,
+              "tips": "query"
+            }
+          ],
+          "responses": {
+            "responsesContentType": "application/json",
+            "code": "200",
+            "description": "{\n  \"Length_of_Stay\": \"string\",\n  \"Email\": \"string\",\n  \"Address\": \"string\",\n  \"Match_Name\": \"string\",\n  \"Internet_Usage\": \"string\",\n  \"Telco_Risk\": \"string\",\n  \"Payment_Behavior\": \"string\",\n  \"Mobile\": \"string\",\n  \"Payment_Type\": \"string\",\n  \"Name\": \"string\",\n  \"Telp\": \"string\",\n  \"Match_Mobile\": \"string\",\n  \"Match_Address\": \"string\",\n  \"Match_Email\": \"string\",\n  \"Browsing_Category\": \"string\",\n  \"Match_Telp\": \"string\",\n  \"SES_ARPU\": \"string\"\n}"
+          },
+          "generatedCodeSnippets": {
+            "programmingLanguage": "Swift",
+            "description": "import Foundation\n\nlet headers = [\n\"content-type\": \"multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW\",\n\"cache-control\": \"no-cache\",\n\"postman-token\": \"b6a92f84-4ca4-a400-c507-e6c0fdc54ed8\"\n]\nlet parameters = [\n[\n\"name\": \"code\",\n\"value\": \"xWnkliVQJURqB2x1\"\n],\n[\n\"name\": \"grant_type\",\n\"value\": \"authorization_code\"\n],\n[\n\"name\": \"redirect_uri\",\n\"value\": \"https://www.getpostman.com/oauth2/callback\"\n],\n"
+          }
+        }
+      ]
+    },
+    "pricing": [
+      {
+        "subscriptionPrice": "19",
+        "planName": "12.000 Query",
+        "planDescriptions": "No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is."
+      },
+      {
+        "subscriptionPrice": "199",
+        "planName": "1M Query",
+        "planDescriptions": "No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is."
+      },
+      {
+        "subscriptionPrice": "19",
+        "planName": "12.000 Query",
+        "planDescriptions": "No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is."
+      },
+      {
+        "subscriptionPrice": "19",
+        "planName": "12.000 Query",
+        "planDescriptions": "No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is."
+      }
+    ]
+  }
+]

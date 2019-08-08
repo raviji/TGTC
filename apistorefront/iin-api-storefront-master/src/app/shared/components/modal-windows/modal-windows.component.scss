@@ -1,0 +1,133 @@
+@import '../../../../styles/variables';
+
+//.modal
+.modal {
+    display: block;
+    background: rgba(0,0,0,0.5);
+    overflow-y: auto;
+    z-index: 4000;
+    &.hide {
+        display: none;
+    }
+    .modal-content {
+        width: 1025px;
+        border-radius: 8px;
+        border: solid 1px #979797;
+        background-color: $greyBg;
+        margin: 120px auto 80px;
+        padding: 46px 235px 70px 231px;
+        .radio-group {
+            &.error {
+                .radio-wrap {
+                    .radio-label {
+                        color: $red;
+                    }
+                }
+            }
+            .radio-wrap {
+                display: inline-block;
+                margin-right: 20px;
+                .radio-label {
+                    color: #171717;
+                    font-size: 14px;
+                    letter-spacing: 0.16px;
+                    line-height: 18px;
+                    display: inline-block;
+                }
+            }
+        }
+        // .input-control
+        .input-control {
+            margin-bottom: 33px;
+            &.mb-56 {
+                margin-bottom: 56px;
+            }
+            &.mb-12 {
+                margin-bottom: 12px;
+            }
+            label {
+                color: $black;
+                font-size: 16px;
+                letter-spacing: 0.18px;
+                font-family: "ProximaNovaRegular";
+                font-weight: 400;
+                display: block;
+                margin-bottom: 13px;
+                em {
+                    color: $redColor;
+                    font-style: normal;
+                }
+            }
+            .inputs {
+                overflow: hidden;
+                &.padding-74 {
+                    padding: 0 74px; 
+                }
+                .text-right {
+                    text-align: right;
+                }
+                .icon {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    width: 64px;
+                    height: 64px;
+                    background-color: $darkBlue;
+                    text-align: center;
+                    line-height: 64px;
+                    font-size: 20px;
+                    color: $white;
+                    &.icon-mins {
+                        left: 0;
+                        border-radius: 5px 0 0 5px;
+                        i {
+                            display: inline-block;
+                            background: url("/assets/i/icon-minus.svg") center center no-repeat;
+                            background-size: 100%;
+                            width: 16px;
+                            height: 2px;
+                            vertical-align: 6px;
+                        }
+                        
+                    }
+                    &.icon-plus {
+                        right: 0;
+                        border-radius: 0 5px 5px 0;
+                        i {
+                            display: inline-block;
+                            background: url("/assets/i/icon-plus.svg") center center no-repeat;
+                            background-size: 100%;
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom-btn {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0 0;
+            .btn {
+                flex: 1;
+                min-width: 1px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+/* fix layout issue when smaller than 1024px width */
+@media (max-width: 1200px) {
+    // .modal
+    .modal {
+        .modal-content {
+            width: auto;
+            margin-right: 40px;
+            margin-left: 40px;   
+            padding: 46px 185px 70px;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<div class="tab-content pleft-20">
+  <app-sd-api-box
+    *ngFor="let item of dataList"
+    [itemData]="item">
+  </app-sd-api-box>
+</div>
+<!-- end .tab-content -->
+<div class="tab-morelink">
+  <a [routerLink]="['/dashboard/more-api-page']">See More API</a>
+</div>

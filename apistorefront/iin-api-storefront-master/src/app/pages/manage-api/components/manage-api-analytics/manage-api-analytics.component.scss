@@ -1,0 +1,162 @@
+@import '../../../../../styles/variables';
+
+::ng-deep {
+    ngb-datepicker {
+        position: absolute;
+        z-index: 100;
+        left: 0;
+        top: 70px;
+        background-color: $white;
+        .custom-day {
+            text-align: center;
+            padding: 0.185rem 0.25rem;
+            display: inline-block;
+            height: 2rem;
+            width: 2rem;
+        }
+        .custom-day.focused {
+            background-color: #e6e6e6;
+        }
+        .custom-day.range, .custom-day:hover {
+            background-color: rgb(2, 117, 216);
+            color: white;
+        }
+        .custom-day.faded {
+            background-color: rgba(2, 117, 216, 0.5);
+        }
+    }
+}
+
+//.chart-all
+.chart-all {
+    padding: 10px 15px 20px 40px;
+    .row {
+        margin-left: -12px;
+        margin-right: -12px;
+        .col {
+            padding: 0 12px;
+        }
+    }
+}
+//.date-row
+.date-row {
+    padding: 30px 40px;
+    .date-module {
+        position: relative;
+        .date-btn {
+            position: relative;
+            display: inline-block;
+            padding-left: 34px;
+            padding-right: 30px;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.75;
+            }
+            .icon-date {
+                background: url(/assets/i/calendar.svg) center center no-repeat;
+                width: 18px;
+                height: 20px;
+                background-size: 100%;
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 15px;
+            }
+            .year-bold {
+                color: $black;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 23px;
+            }
+            .date-from-to {
+                color: $black;
+                font-size: 16px;
+                line-height: 23px;
+            }
+            .btn-drop {
+                background: url(/assets/i/icon-arrow-top.svg) center center no-repeat;
+                width: 18px;
+                height: 18px;
+                background-size: 12px auto;
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                top: 16px;
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}
+.chart-boxs {
+    background-color: $white;
+    min-height: 378px;
+    margin-bottom: 40px;
+    padding: 27px 14px 20px;
+    .chart-title {
+        color: #5a6872;
+        font-size: 20px;
+        line-height: 25px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    .little-grey {
+        color: #5a6872;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .bold-num {
+        color: #3b1a40;
+        font-size: 22px;
+        font-weight: 700;
+    }
+    .two-parent {
+        display: flex;
+        .items {
+            margin-right: 15px;
+            .bold-num {
+                line-height: 30px;
+            }
+            .minu-txt {
+                color: #3c6df0;
+                font-size: 12px;
+            }
+        }
+    }
+    .chart-info {
+        padding-top: 30px;
+        &.have-left {
+            padding-left: 33px;
+            position: relative;
+            .left-txt {
+                position: absolute;
+                left: -36px;
+                top: 36%;
+                transform: rotate(-90deg);
+                color: #5a6872;
+                font-size: 10px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+        // .date-group
+        .date-group {
+            padding: 16px 15px 20px 40px;
+            .weeks-item {
+                color: #5a6872;
+                font-size: 12px;
+                text-transform: uppercase;
+            }  
+        }
+    }
+    .chart-img {
+        height: auto;
+        .bottom-txt {
+            text-align: center;
+            color: #5a6872;
+            font-size: 10px;
+            font-weight: 700;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+    }
+}

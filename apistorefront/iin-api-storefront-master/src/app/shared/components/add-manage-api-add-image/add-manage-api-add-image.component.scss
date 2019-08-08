@@ -1,0 +1,114 @@
+@import '../../../../styles/variables';
+
+//.tab-contents
+.tab-contents {
+    padding: 30px 60px;
+    &.add {
+        padding: 12px 0;
+    }
+}
+
+// .form-box
+.form-box {
+    padding: 2px 0 20px 0;
+    .input-control {
+        margin-bottom: 18px;
+        &.mright-22 {
+            margin-right: 22px;
+        }
+        label {
+            display: block;
+            color: $black;
+            font-size: 16px;
+            letter-spacing: 0.18px;
+            margin-bottom: 13px;
+            .color-red {
+                color: $redColor;
+            }
+        }
+        .w-559 {
+            width: 559px;
+        }
+    }
+    .title-uppercase {
+        color: $black;
+        font-size: 23px;
+        text-transform: uppercase;
+        margin-bottom: 13px;
+    }
+    .row-file {
+        display: flex;
+        -webkit-display: flex;
+        margin-bottom: 40px;
+        .file-img {
+            width: 139px;
+            height: 139px;
+            border-radius: 2px;
+            border: 1px dashed #0069a3;
+            background: url("/assets/i/icon-upload.svg") center center no-repeat;
+            background-size: 22px 16px;
+            position: relative;
+            &.no-default {
+                border: none;
+                background: none;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            input {
+                opacity: 0;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                position: absolute;
+            }
+        }
+        .file-txt {
+            margin-left: 30px;
+        }
+        .name {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+        .txt {
+            font-size: 16px;
+            color: $black;
+            margin-bottom: 5px;
+            em {
+                display: block;
+                font-style: normal;
+            }
+        }
+    }
+    .textareas {
+        height: 166px;
+        border-radius: 5px;
+        border: 1px solid $inputborder;
+        background-color: $white;
+        padding: 10px 5px 10px 14px;
+        textarea {
+            font-size: 16px;
+            &::-webkit-input-placeholder {
+                color: $placeColor;
+            }
+            &:-moz-placeholder {
+                color: $placeColor;
+            }
+            &::-moz-placeholder {
+               color: $placeColor;
+            }
+            &:-ms-input-placeholder {
+                color: $placeColor;
+            }
+        }
+    }
+    .btn-box {
+        margin-top: 38px;
+        margin-bottom: 50px;
+        .btn {
+            margin-right: 22px;
+        }
+    }
+}

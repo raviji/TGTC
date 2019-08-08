@@ -1,0 +1,42 @@
+<div class="wide-content">
+  <div class="w-770">
+    <div class="title">
+      World Wide APIs Services to help 
+      businesses outsmarting challenges
+    </div>
+    <div class="sm-tit">
+      <span class="line w-66"></span>
+      <em>User Engagement</em>
+      <span class="line w-151"></span>
+      <span class="radius"></span>
+    </div>
+    <ul class="list">
+      <li>Analytics</li>
+      <li>Intelligent Video</li>
+      <li>Payment</li>
+    </ul>
+    <div class="bottom-btn">
+      <a [routerLink]="['/landing/more-api-page']" class="btn"><span>Browse All APIs</span></a>
+    </div>
+  </div>
+  <!-- end .w-770 -->
+  <div class="mleft-50">
+    <div class="scroll-box">
+      <ngb-carousel>
+        <ng-template ngbSlide *ngFor="let item of dataList;let i = index">
+          <app-sd-api-box
+            [itemData]="item"
+            [isLoggedIn]="false"
+            [isShownTag]="false">
+          </app-sd-api-box>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <div class="bottom-txt">
+      <a [routerLink]="['/landing/more-api-page']" class="btn-all">
+        <span>See All 300+</span>
+        User Engagement API
+      </a>
+    </div>
+  </div>
+</div>

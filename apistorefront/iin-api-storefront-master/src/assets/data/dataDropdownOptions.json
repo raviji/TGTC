@@ -1,0 +1,65 @@
+{
+  "categoriesDropdown": [
+    {
+      "option": "Finance"
+    },
+    {
+      "option": "Category 1"
+    },
+    {
+      "option": "Category 2"
+    }
+  ],
+  "authenticationDropdown": [
+    {
+      "option": "Use IINAPI Authentication"
+    },
+    {
+      "option": "Option 1"
+    },
+    {
+      "option": "Option 2"
+    }
+  ],
+  "groupDropdown": [
+    {
+      "option": "CryptoCall"
+    },
+    {
+      "option": "CryptoInput"
+    }
+  ],
+  "schemesDropdown": [
+    {
+      "option": "HTTPS "
+    },
+    {
+      "option": "Schemes 1"
+    },
+    {
+      "option": "Schemes 2"
+    }
+  ],
+  "responsesContentTypeDropdown": [
+    {
+      "option": "application/json "
+    },
+    {
+      "option": "Type 1"
+    },
+    {
+      "option": "Type 2"
+    }
+  ],
+  "programmingLanguageDropdown": [
+    {
+      "option": "Swift "
+    },
+    {
+      "option": "Language 1"
+    },
+    {
+      "option": "Language 2"
+    }
+  ]
+}

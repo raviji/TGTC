@@ -1,0 +1,116 @@
+@import '../../../../../styles/variables';
+
+.tab {
+    width: 260px;
+    .tab-item {
+        margin-bottom: 79px;
+        li {
+            a {
+                display: block;
+                height: 46px;
+                line-height: 46px;
+                border-radius: 2px;
+                color: #97a4b0;
+                font-size: 15px;
+                padding-left: 55px;
+                position: relative;
+                &.active {
+                    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1);
+                    color: #00477b;
+                    background-color: #ffffff;
+                }
+                .icon {
+                    display: block;
+                    width: 22px;
+                    position: absolute;
+                    left: 15px;
+                    top: 13px;
+                }
+                .icon-user {
+                    height: 18px;
+                    background: url(/assets/i/user-check.svg);
+                    background-size: 22px;
+                }
+                .icon-customer {
+                    height: 24px;
+                    background: url(/assets/i/dollar-sign.svg) no-repeat;
+                    background-size: 14px;
+                    top: 11px;
+                }
+                .icon-card {
+                    height: 16px;
+                    background: url(/assets/i/credit-card.svg);
+                    background-size: 22px;
+                    top: 14px;
+                }
+                .icon-bill {
+                    height: 16px;
+                    background: url(/assets/i/mail.svg)  no-repeat;
+                    background-size: 20px;
+                    top: 14px;
+                }
+                .icon-tel {
+                    height: 21px;
+                    background: url(/assets/i/phone-call.svg)  no-repeat;
+                    background-size: 21px;
+                    top: 11px;
+                }
+            }
+        }
+    }
+    .bottom-link {
+        a {
+            color: #00477b;
+            font-size: 15px;
+            background: url(/assets/i/arrow-right-blue.svg) right center no-repeat;
+            background-size: 16px;
+            padding-right: 50px;
+            &:hover {
+                opacity: 0.85;
+            }
+        }
+    }
+}
+.code {
+    margin-left: 40px;
+    height: 363px;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    flex: 1;
+    position: relative;
+    z-index: 9;
+    .code-tabs {
+        height: 63px;
+        background-color: #2e3a4d;
+        ul {
+            display: flex;
+            height: 100%;
+            li {
+                .tab-items {
+                    padding: 0 33px;
+                    display: block;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 10px;
+                    color: #ffffff;
+                    font-size: 15px;   
+                    &.current {
+                        box-shadow: 0 -1px 0 #fcb02f inset;
+                    }
+                }
+            }
+        }
+    }
+    .code-content {
+        padding: 18px 28px;
+        max-height: 300px;
+        overflow: auto;
+        height: 100%;
+        pre {
+            word-wrap: break-all;
+            color: #000;
+            font-size: 15px;
+        }
+    }
+}

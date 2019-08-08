@@ -1,0 +1,113 @@
+@import '../../../../styles/variables';
+
+//.tab-contents
+.tab-contents {
+    padding: 30px 60px;
+}
+
+//.tab-boxs
+.tab-boxs {
+    padding: 0;
+    .title {
+        color: $black;
+        font-size: 16px;
+        letter-spacing: 0.18px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+    .txt {
+        color: $grey;
+        font-size: 16px;
+        letter-spacing: 0.18px;
+        margin-bottom: 20px;
+    }
+    .row-add {
+        margin-bottom: 35px;
+        .btn-add {
+            color: #00477b;
+            font-size: 17px;
+            line-height: 20px;
+            background: url("/assets/i/icon-add-circle.svg") right center no-repeat;
+            background-size: 20px;
+            padding-right: 43px;
+            &:hover {
+                opacity: 0.85;
+            }
+        }
+    }
+    .row-plane {
+        display: flex;
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        .plane {
+            width: 383px;
+            min-height: 428px;
+            box-shadow: 0 2px 4px rgba(44, 46, 48, 0.05);
+            border-radius: 5px;
+            border: 1px solid #e7eaee;
+            background-color: $white;
+            padding-top: 20px;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            .num {
+                text-align: center;
+                color: #2f5bea;
+                font-size: 60px;
+                font-weight: 600;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space:nowrap;
+                width:279px;
+                display: block;
+                margin: 0 auto;
+            }
+            .price {
+                color: #7e8085;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 34px;
+                text-align: center;
+                margin-bottom: 30px;
+                padding: 0 15px;
+            }
+            .txt-box {
+                border-top: 1px solid #e7eaee;
+                padding: 30px 40px 40px;
+                p {
+                    text-align: center;
+                    color: #7e8085;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 28px;
+                    margin-bottom: 30px;
+                }
+                .btn {
+                    display: block;
+                    text-align: center;
+                    width: 281px;
+                    height: 55px;
+                    line-height: 55px;
+                    border-radius: 5px;
+                    border: 1px solid #c9cdd5;
+                    background-color: $white;
+                    padding: 0;
+                    margin: 0 auto;
+                    color: #54565a;
+                    font-weight: 600;
+                }
+            }
+        }
+    } 
+}
+
+@media (max-width: 1200px) {
+    //.tab-boxs
+    .tab-boxs {
+        .row-plane {
+            .plane {
+                width: 323px;
+            }
+        }
+    }
+}

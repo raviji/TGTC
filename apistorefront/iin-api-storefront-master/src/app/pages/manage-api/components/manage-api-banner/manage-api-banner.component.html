@@ -1,0 +1,78 @@
+<div class="blue-banner"
+  *ngIf="bannerType === 'default-page'">
+  <h4 class="titles">
+    CRYPTOCOIN SIGNAL
+    <a href="javascript:;" class="btn-extra"></a>
+  </h4>
+  <div class="tabs other-tabs">
+    <a href="javascript:;" class="tab"
+      [class.active]="currentTab === 'Overview'"
+      (click)="clickTab('Overview')">
+      Overview
+    </a>
+    <a href="javascript:;" class="tab"
+      [class.active]="currentTab === 'Settings'"
+      (click)="clickTab('Settings')">
+      Settings
+    </a>
+    <a href="javascript:;" class="tab"
+      [class.active]="currentTab === 'Endpoints'"
+      (click)="clickTab('Endpoints')">
+      Endpoints
+    </a>
+    <a href="javascript:;" class="tab"
+      [class.active]="currentTab === 'Plans & Pricing'"
+      (click)="clickTab('Plans & Pricing')">
+      Plans & Pricing
+    </a>
+    <a href="javascript:;" class="tab"
+      [class.active]="currentTab === 'Docs'"
+      (click)="clickTab('Docs')">
+      Docs
+    </a>
+  </div>
+</div>
+<!--end .blue-banner-->
+
+<div class="blue-banner"
+  *ngIf="bannerType === 'analytics-page'">
+  <h4 class="titles">
+    CRYPTOCOIN SIGNAL - ANALYTICS
+  </h4>
+</div>
+<!--end .blue-banner-->
+
+<div class="blue-banner"
+  *ngIf="bannerType === 'support-page'">
+  <h4 class="titles">
+    CRYPTOCOIN SIGNAL - SUPPORT
+  </h4>
+  <div class="tabs other-tabs">
+    <a href="javascript:;" class="tab"
+      [class.active]="currentTab === 'Inbox'"
+      (click)="clickTab('Inbox')">
+      Inbox
+    </a>
+    <a href="javascript:;" class="tab"
+      [class.active]="currentTab === 'Unread'"
+      (click)="clickTab('Unread')">
+      Unread
+    </a>
+    <a href="javascript:;" class="tab"
+      [class.active]="currentTab === 'Starred'"
+      (click)="clickTab('Starred')">
+      Starred
+    </a>
+    <a href="javascript:;" class="tab"
+      [class.active]="currentTab === 'Sent'"
+      (click)="clickTab('Sent')">
+      Sent
+    </a>
+    <a href="javascript:;" class="tab"
+      [class.active]="currentTab === 'Archived'"
+      (click)="clickTab('Archived')">
+      Archived
+    </a>
+  </div>
+</div>
+<!--end .blue-banner-->

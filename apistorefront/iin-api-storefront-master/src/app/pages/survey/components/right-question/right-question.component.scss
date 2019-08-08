@@ -1,0 +1,56 @@
+@import '../../../../../styles/variables';
+
+.que-box {
+  margin-top: 243px;
+  height: 256px;
+  box-shadow: 5px 10px 30px rgba(0, 71, 123, 0.14);
+  border-radius: 6px;
+  background-color: $white;
+  padding: 20px;
+  .que-num {
+    color: #4a4a4a;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.83px;
+    line-height: 29px;
+    margin-bottom: 15px;
+  }
+  .que-title {
+    color: $darkBlue;
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  .ans {
+    a {
+      display: inline-block;
+      text-align: center;
+      line-height: 36px;
+      width: 134px;
+      height: 36px;
+      border-radius: 18px;
+      background-color: #f8f7fa;
+      color: #4b4d63;
+      font-size: 12px;
+      font-weight: 700;
+      margin-right: 6px;
+      margin-bottom: 15px;
+      &.w-215 {
+        width: 215px;
+      }
+      &.active {
+        background-color: $blueBg;
+        color: $white;
+      }
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .que-box {
+    margin-top: 180px;
+    height: 256px;
+  }
+}

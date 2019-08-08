@@ -1,0 +1,74 @@
+<div class="tab-contents">
+  <div class="form-box">
+    <div class="form-title">Profile</div>
+
+    <form [formGroup]="formGroup">
+      <div class="row-file">
+        <div class="file-img"
+          [class.no-default]="dataList['imgUrl'] !== ''">
+          <img src="{{dataList['imgUrl']}}" alt="img"
+            *ngIf="dataList['imgUrl'] !== ''">
+          <input class="hide" type="file" accept=".png,.jpg,.jpeg" #file
+        (change)="selectFile($event);">
+      <a href="javascript:;" class="blue-links"
+        (click)="file.click()">
+        Edit Picture
+      </a>
+        </div>
+        <div class="file-txt">
+          <div class="name">
+            Profile Picture
+          </div>
+          <p class="txt">Recommended Image Size :</p>
+          <p class="txt">500 X 500 Px JPEG/PNG
+            <em>Formats</em>
+          </p>
+        </div>
+      </div>
+      
+      <div class="input-control">
+        <label>Full Name</label>
+        <div class="inputs w-559"
+          [ngClass]="{'error': submitted && f.fullName.errors}">
+          <input type="text" placeholder="Full Name" 
+            formControlName="fullName"/>
+        </div>
+      </div>
+      <!-- end .input-control -->
+      <div class="input-control">
+        <label>Email</label>
+        <div class="inputs w-559"
+          [ngClass]="{'error': submitted && f.email.errors}">
+          <input type="text" placeholder="Email"
+            formControlName="email"/>
+        </div>
+      </div>
+      <!-- end .input-control -->
+      <div class="input-control">
+        <label>Phone Number</label>
+        <div class="inputs w-559"
+          [ngClass]="{'error': submitted && f.phoneNumber.errors}">
+          <input type="text" placeholder="Phone Number"
+            formControlName="phoneNumber"/>
+        </div>
+      </div>
+      <!-- end .input-control -->
+      <div class="input-control">
+        <label>Github</label>
+        <div class="inputs w-559"
+          [ngClass]="{'error': submitted && f.github.errors}">
+          <input type="text" placeholder="Github"
+            formControlName="github"/>
+        </div>
+      </div>
+      <!-- end .input-control -->
+      <!-- end .input-control -->
+      <a href="javascript:;" class="btn-submit"
+        (click)="updateProfile()">
+        Update Profile
+      </a>
+    </form>
+  </div>
+  <!-- end .form-box -->
+</div>
+<!--end .tab-contents-->

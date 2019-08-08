@@ -1,0 +1,21 @@
+<div class="plane-rec"
+  [class.list-view]="viewType === 'list'">
+  <div class="icon">
+    <img src="/assets/i/{{itemData['iconName']}}" alt="img">
+  </div>
+  <h2 class="tit">{{itemData['title']}}</h2>
+  <p class="txt">
+    {{itemData['description']}}
+  </p>
+  <div class="tag"
+    *ngIf="isShownTag">
+    <a href="javascript:;"
+      *ngFor="let tagItem of itemData['tagList']">
+      {{tagItem['name']}}
+    </a>
+  </div>
+  <div class="btns">
+    <a [routerLink]="['/' + (isLoggedIn ? 'dashboard' : 'landing') + '/detail-api-page/' + itemData['pageId']]" class="btn-border">Learn More</a>
+  </div>
+</div>
+<!-- end.plane-rec -->

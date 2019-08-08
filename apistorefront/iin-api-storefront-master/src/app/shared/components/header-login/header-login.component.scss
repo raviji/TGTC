@@ -1,0 +1,180 @@
+@import '../../../../styles/variables';
+
+//.header 
+.header {
+    height: 48px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
+    background-color: $darkBlue;
+    position: fixed;
+    left: 256px;
+    top: 0;
+    width: calc(100% - 256px);
+    z-index: 3999;
+    // .user-area
+    .user-area {
+        .photos {
+            .btn-photo {
+                .txt {
+                    line-height: 19px;
+                    color: $white;
+                    font-size: 13px;
+                }
+                .photo {
+                    display: inline-block;
+                    margin-left: 10px;
+                    vertical-align: middle;
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 100%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            .notifi-wrapper {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 15px;
+                .btn-ring {
+                    background: url(/assets/i/ring.svg) center center no-repeat;
+                    background-size: 17px auto;
+                    position: relative;
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    .red-point {
+                        position: absolute;
+                        top: -1px;
+                        right: -2px;
+                        height: 7px;
+                        width: 7px;
+                        background-color: $redColor;
+                        border-radius: 100%;
+                    }
+                }
+                .modal-noti {
+                  position: absolute;
+                  right: 26px;
+                  top: 48px;
+                  width: 288px;
+                  box-shadow: 0 5px 35px 5px rgba(21, 21, 22, 0.1), 0 10px 14px -4px rgba(21, 21, 22, 0.3);
+                  border-radius: 10px;
+                  background-color: #ffffff;  
+                  padding: 19px 23px 5px;
+                  .btn-close {
+                    position: absolute;
+                    right: 24px;
+                    top: 22px;
+                    width: 12px;
+                    height: 12px;
+                    display: block;
+                    background: url(/assets/i/icon-close.svg);
+                    background-size: 100%;
+                    &:hover {
+                      opacity: 0.85;
+                    }
+                  }
+                  .title {
+                    color: #000000;
+                    font-family: "ProximaNovaRegular";
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    margin-bottom: 17px;
+                  }
+                  .list {
+                    li {
+                      border-bottom: solid 1px #e0e0e0;
+                      padding-bottom: 10px;
+                      margin-bottom: 24px;
+                      &:last-child {
+                        border-bottom: none;
+                      }
+                      .tit {
+                        display: block;
+                        color: #00477b;
+                        font-family: "ProximaNovaRegular";
+                        font-size: 14px;
+                        font-weight: 400;
+                        overflow:hidden;
+                          text-overflow:ellipsis;
+                          white-space:nowrap;
+                          &:hover {
+                            opacity: 0.85;
+                          }
+                      }
+                      .txt {
+                        display: block;
+                        color: #000000;
+                        font-family: "ProximaNovaRegular";
+                        font-size: 14px;
+                        font-weight: 400;
+                        overflow:hidden;
+                          text-overflow:ellipsis;
+                          white-space:nowrap;
+                      }
+                      .date {
+                        display: block;
+                        color: #98a0a6;
+                        font-family: "ProximaNovaRegular";
+                        font-size: 14px;
+                        font-weight: 400;
+                      }
+                    }
+                  } 
+                }
+            }
+            .log-out {
+                cursor: pointer;
+                background: url(/assets/i/log-out.svg) center center no-repeat;
+                background-size: 18px auto;
+                display: inline-block;
+                vertical-align: middle;
+                width: 24px;
+                height: 24px;
+                margin-right: 28px;
+            }
+        }
+    }
+}
+//.search-module
+.search-module {
+    padding: 10px 35px;
+    .inputs {
+        background-color: transparent;
+        border: 0;
+        padding-left: 30px;
+        position: relative;
+        height: 36px;
+        width: 245px;
+        input {
+            color: $white;
+            font-size: 14px;
+            &::-webkit-input-placeholder {
+                color: $white;
+            }
+            &:-moz-placeholder {
+                color: $white;
+            }
+            &::-moz-placeholder {
+                color: $white;
+            }
+            &:-ms-input-placeholder {
+                color: $white;
+            }
+        }
+        .btn-search {
+            background: url(/assets/i/search.svg) center center no-repeat;
+            background-size: 18px auto;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

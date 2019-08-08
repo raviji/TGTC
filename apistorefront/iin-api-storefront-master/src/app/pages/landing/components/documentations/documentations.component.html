@@ -1,0 +1,36 @@
+<div class="title">
+  Documentations
+</div>
+<div class="txt-p">
+  <p>
+    You can download the IINAPI Documentation as a zip file for offline use. To download the current version of the IINAPI 
+    Documentation, Select the documentation language and click the download button.
+  </p>
+</div>
+<div class="center-down">
+  <div class="drop-inputs">
+    <div class="drop-lang"
+      (clickOutside)="openCountryDropdown = false;"
+      [class.open]="openCountryDropdown">
+      <a href="javascript:;" class="links"
+        (click)="openCountryDropdown = true;">
+        <i class="icon-country icon-us"></i>
+        <span class="lang">{{countryValue}}</span>
+        <i class="icon-drop"></i>
+      </a>
+      <div class="drop-menu">
+        <ul>
+          <li
+            *ngFor="let item of countryDropdown">
+            <a href="javascript:;" class="drop-item"
+              (click)="countryValue = item['option'];openCountryDropdown = false;">
+              {{item['option']}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <a href="javascript:;" class="btn btn-blue">download</a>
+  </div>
+  <div class="red-points"></div>
+</div>

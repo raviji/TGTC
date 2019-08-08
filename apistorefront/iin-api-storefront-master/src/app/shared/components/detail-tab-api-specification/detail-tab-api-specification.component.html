@@ -1,0 +1,150 @@
+<a [routerLink]="['/login']" class="red-border" *ngIf="!isLoggedIn">
+  <i class="icon icon-must"></i>
+  <span class="txt">
+    You must login to access this feature !
+  </span>
+</a>
+<!--end .red-border-->
+
+<ng-container *ngIf="isLoggedIn">
+  <h2 class="title-bold">API REQUEST</h2>
+  <div class="select-box">
+    <label for="">SCHEMES</label>
+    <div ngbDropdown class="d-inline-block w-312"
+      *ngIf="dataListDropdown"
+      [ngClass]="{ 'error': submitted && false}">
+      <button class="btn btn-outline-primary" ngbDropdownToggle>
+        {{dataList['schemes']}}
+      </button>
+      <div ngbDropdownMenu>
+        <button ngbDropdownItem class="dropdown-item"
+          *ngFor="let optionItem of dataListDropdown['schemesDropdown']"
+          (click)="dataList['schemes'] = optionItem['option']">
+          {{optionItem['option']}}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="select-list">
+    <div class="item"
+      *ngFor="let item of dataList['list']">
+      <a href="javascript:;" class="select"
+        (click)="item['expanded'] = !item['expanded']"
+        [class.border-blue]="item['type'] === 'GET'"
+        [class.border-green]="item['type'] === 'POST'">
+        <span class="tag"
+          [class.bg-blue]="item['type'] === 'GET'"
+          [class.bg-green]="item['type'] === 'POST'">
+          {{item['type']}}
+        </span>
+        <span class="value">{{item['url']}}</span>
+        <i class="btn-arrow"
+          [class.arrow-blue]="item['type'] === 'GET'"
+          [class.arrow-green]="item['type'] === 'POST'"
+          [class.expanded]="item['expanded']">
+        </i>
+      </a>
+      <ng-container *ngIf="item['expanded']">
+        <div class="group-code">
+          <div class="code-top">
+            <span>Parameters</span>
+            <a href="javascript:;" class="btn-try">Try It Out</a>
+          </div>
+          <div class="row code-main">
+            <div class="col-md-6">
+              <div class="tit-bold">Name</div>
+              <ul class="data-list">
+                <li *ngFor="let parameterItem of item['parameters']">
+                  <span class="sm-tit">
+                    {{parameterItem['name']}}
+                    <em class="color-red"
+                      *ngIf="parameterItem['isRequired']">
+                      *required
+                    </em>
+                  </span>
+                  <span class="value">{{parameterItem['type']}}</span>
+                  <span class="tips">({{parameterItem['tips']}})</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="tit-bold">Description</div>
+            </div>
+          </div>
+        </div>
+        <!-- end .group-code -->
+        <div class="group-code">
+          <div class="code-top">
+            <span>Responses</span>
+            <div class="select-box mb-0">
+              <label class="h-47">Responses content type</label>
+              <div ngbDropdown class="d-inline-block w-272"
+                *ngIf="dataListDropdown"
+                [ngClass]="{ 'error': submitted && false}">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{item['responses']['responsesContentType']}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button ngbDropdownItem class="dropdown-item"
+                    *ngFor="let optionItem of dataListDropdown['responsesContentTypeDropdown']"
+                    (click)="item['responses']['responsesContentType'] = optionItem['option']">
+                    {{optionItem['option']}}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row code-main">
+            <div class="col-md-6">
+              <div class="tit-bold">Code</div>
+              <div class="num">
+                {{item['responses']['code']}}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="tit-bold">Description</div>
+              <pre class="code"
+                [innerHTML]="item['responses']['description']">
+              </pre>
+            </div>
+          </div>    
+        </div>
+        <!-- end .group-code -->
+        <div class="group-code">
+          <div class="code-top">
+            <span>Generated Code Snippets</span>
+            <div class="select-box mb-0">
+              <label for="" class="h-47">Programming Language</label>
+              <div ngbDropdown class="d-inline-block w-272"
+                *ngIf="dataListDropdown"
+                [ngClass]="{ 'error': submitted && false}">
+                <button class="btn btn-outline-primary" ngbDropdownToggle>
+                  {{item['generatedCodeSnippets']['programmingLanguage']}}
+                </button>
+                <div ngbDropdownMenu>
+                  <button ngbDropdownItem class="dropdown-item"
+                    *ngFor="let optionItem of dataListDropdown['programmingLanguageDropdown']"
+                    (click)="item['generatedCodeSnippets']['programmingLanguage'] = optionItem['option']">
+                    {{optionItem['option']}}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row code-main">
+            <div class="col-md-12">
+              <pre class="code mb-48"
+                [innerHTML]="item['generatedCodeSnippets']['description']">
+              </pre>
+              <div class="bottom-btn">
+                <a href="javascript:;" class="btn btn-blue w-219"><span>COPY TO CLIPBOARD</span></a>
+              </div>
+            </div>
+          </div>    
+        </div>
+        <!-- end .group-code -->
+      </ng-container>
+    </div>
+    <!-- end .item -->
+  </div>
+</ng-container>

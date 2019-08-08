@@ -1,0 +1,100 @@
+<div class="search-content">
+  <div class="left-bar">
+    <h3 class="title">FILTER & REFINE</h3>
+    <div class="check-group">
+      <h4 class="tit">Category</h4>
+      <div class="checkbox-new-wrap">
+        <input type="checkbox" name="checkbox-category-all" id="checkbox-category-all"
+          [(ngModel)]="filterData['categoryAll']"
+          (change)="changeAllCategory()"/>
+        <label for="checkbox-category-all">All</label>
+      </div>
+      <div class="checkbox-new-wrap"
+        *ngFor="let item of filterData['category'];let i = index">
+        <input type="checkbox" name="checkbox-category-{{i}}" id="checkbox-category-{{i}}"
+          [(ngModel)]="item['checked']"
+          (change)="changeSubCategory()"/>
+        <label for="checkbox-category-{{i}}">
+          {{item['label']}}
+        </label>
+      </div>
+    </div>
+    <!-- end .check-group -->
+
+    <div class="check-group">
+      <h4 class="tit">Pricing</h4>
+      <div class="checkbox-new-wrap">
+        <input type="checkbox" name="checkbox-pricing-all" id="checkbox-pricing-all"
+          [(ngModel)]="filterData['pricingAll']"
+          (change)="changeAllPricing()"/>
+        <label for="checkbox-pricing-all">All</label>
+      </div>
+      <div class="checkbox-new-wrap"
+        *ngFor="let item of filterData['pricing'];let i = index">
+        <input type="checkbox" name="checkbox-pricing-{{i}}" id="checkbox-pricing-{{i}}"
+          [(ngModel)]="item['checked']"
+          (change)="changeSubPricing()"/>
+        <label for="checkbox-pricing-{{i}}">
+          {{item['label']}}
+        </label>
+      </div>
+    </div>
+    <!-- end .check-group -->
+
+    <div class="check-group">
+      <h4 class="tit">Sort</h4>
+      <div class="checkbox-new-wrap"
+        *ngFor="let item of filterData['sort'];let i = index">
+        <input type="checkbox" name="checkbox-sort-{{i}}" id="checkbox-sort-{{i}}"
+          [(ngModel)]="item['checked']"
+          (change)="changeSort(i)"/>
+        <label for="checkbox-sort-{{i}}">
+          {{item['label']}}
+        </label>
+      </div>
+    </div>
+    <!-- end .check-group -->
+  </div>
+  <div class="result-boxs">
+    <div class="tips">
+      <span>20,123 <em>items</em></span>
+      <a href="javascript:;" class="icon icon-grid"
+        [class.active]="activeView === 'Grid'"
+        (click)="activeView = 'Grid'">
+      </a>
+      <a href="javascript:;" class="icon icon-list"
+        [class.active]="activeView === 'List'"
+        (click)="activeView = 'List'">
+      </a>
+    </div>
+    <div *ngIf="activeView === 'Grid'">
+      <div class="row result-items">
+        <app-sd-api-box
+          *ngFor="let item of dataListShown"
+          [itemData]="item"
+          [isLoggedIn]="isLoggedIn">
+        </app-sd-api-box>
+      </div>
+    </div>
+    <div *ngIf="activeView === 'List'">
+      <div class="row result-items">
+        <div class="col-md-12"
+          *ngFor="let item of dataListShown">
+          <app-sd-api-box
+            [itemData]="item"
+            [viewType]="'list'"
+            [isLoggedIn]="isLoggedIn">
+          </app-sd-api-box>
+        </div>
+      </div>
+    </div>
+    
+    <div class="loading"
+      *ngIf="showLoadMore">
+      <span>Load More Data..
+        <img src="/assets/i/icon-loading.svg"/>
+      </span>
+    </div>
+  </div>
+</div>
+<!-- end .search-content -->

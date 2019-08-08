@@ -1,0 +1,59 @@
+<div class="main-content">  
+  <div class="top-bg">
+    <div class="max-1156">
+      <app-sd-header-non-login></app-sd-header-non-login>
+    </div>
+    <div class="banner max-1156">
+      <div class="txt-box">
+        <h2 class="title">HELP</h2>
+        <div class="crums">
+          <ul>
+            <li><a [routerLink]="['/landing']" class="navs">Home</a></li>
+            <li><span class="right-arrow"></span><a href="javascript:;" class="navs">Help</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <div class="inputs">
+            <input type="text" placeholder="What can we help you with?">
+          </div>
+          <a href="javascript:;" class="btn-search"><span>Search</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end .top-bg -->
+  
+   <div class="normal-box video-help-box">
+      <div class="max-1156">
+        <app-sd-videos-help></app-sd-videos-help>
+      </div>
+    </div>
+    <!-- end .normal-box -->
+    <div class="normal-box faq-box">
+      <div class="ab-left"></div>
+      <div class="max-1156">
+        <app-sd-faqs></app-sd-faqs>
+      </div>
+      <div class="ab-right"></div>
+    </div>
+    <!-- end .normal-box -->
+    <div class="normal-box bg-lightgray doc-box">
+      <div class="left-top">
+        <div class="blue-points"></div>
+        <div class="blue-block"></div>
+      </div>
+      <div class="max-1156">
+        <app-sd-documentations></app-sd-documentations>
+      </div>
+    </div>
+    <!--end .bg-lightgray-->
+    <div class="normal-box contact-box">
+      <div class="max-1156">
+        <app-sd-contact-us></app-sd-contact-us>
+      </div>
+    </div>
+    <!--end .normal-box--> 
+  
+  <app-sd-footer-non-login></app-sd-footer-non-login>
+</div>
+<!--end .main-content-->

@@ -1,0 +1,44 @@
+<div class="tab-contents inbox-content">
+  <div class="table-data">
+    <div class="row-th">
+      <div class="col-th width10">
+        <div class="spacing">No</div>
+      </div>
+      <div class="col-th width32">
+        <div class="spacing">USER</div>
+      </div>
+      <div class="col-th width12">
+        <div class="spacing">DATE</div>
+      </div>
+      <div class="col-th ">
+        <div class="spacing">SUBJECT</div>
+      </div>
+      <div class="col-th width50">
+        <div class="spacing"></div>
+      </div>
+    </div>
+    <div class="row-td"
+      *ngFor="let item of dataList;let i = index">
+      <div class="col-td width10">
+        <div class="spacing">#{{i + 1}}</div>
+      </div>
+      <div class="col-td width32">
+         <div class="spacing">{{item['User']}}</div>
+       </div>
+       <div class="col-td width12">
+         <div class="spacing">{{item['Date']}}</div>
+       </div>
+       <div class="col-td ">
+         <div class="spacing">{{item['Subject']}}</div>
+       </div>
+       <div class="col-td width50">
+         <div class="spacing">
+           <a href="javascript:;" class="icon-tool btn-more"></a>
+         </div>
+       </div>
+    </div>
+    <!--end .row-td-->
+  </div>
+  <!--end .table-data-->
+</div>
+<!--end .tab-contents-->

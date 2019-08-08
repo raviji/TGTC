@@ -1,0 +1,29 @@
+<app-sd-left-sidebar
+  [pageType]="'dashboard-page'">
+</app-sd-left-sidebar>
+<div class="right-content">
+  <app-sd-header-login></app-sd-header-login>
+  
+  <div class="banner h-227">
+    <div class="back">
+      <a [routerLink]="['/dashboard']" class="btn-back">Back To Dashboard</a>
+    </div>
+    <div class="txt-box">
+        <h2 class="title">{{dataListInitial[detailId]['title']}} - Report</h2>
+        <div class="bottom-btn">
+          <a [routerLink]="['/dashboard/detail-api-page/' + detailId]" class="btn btn-white"><i class="icon-book"></i>View Documentations</a>
+        </div>
+      </div>
+  </div>
+  <!-- end .banner -->
+  
+  <app-sd-dashboard-api-report
+    *ngIf="dataListInitial"
+    [dataListInitial]="dataListInitial"
+    [dataListAnotherVersion]="dataListAnotherVersion"
+    [detailId]="detailId">
+  </app-sd-dashboard-api-report>
+  
+  <app-sd-footer-login></app-sd-footer-login>
+</div>
+<!--end .right-content-->

@@ -1,0 +1,13 @@
+<div class="que-box">
+  <h2 class="que-num">Question {{currentIndex + 1}}</h2>
+  <h3 class="que-title">{{dataList[currentIndex]['title']}}</h3>
+  <div class="ans">
+    <a href="javascript:;" class="active w-215"
+      *ngFor="let item of dataList[currentIndex]['options'];let i = index"
+      [class.active]="dataList[currentIndex]['selectedOption'] === item['name']"
+      (click)="dataList[currentIndex]['selectedOption'] = item['name']">
+      {{item['name']}}
+    </a>
+  </div>
+</div>
+<!-- end .que-box -->

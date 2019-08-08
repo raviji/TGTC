@@ -1,0 +1,55 @@
+<div class="main-content">  
+  <div class="top-bg">
+    <div class="max-1256">
+      <app-sd-header-non-login></app-sd-header-non-login>
+      
+      <app-sd-landing-banner
+        *ngIf="dataList"
+        [dataList]="dataList['Banner API']">
+      </app-sd-landing-banner>
+    </div>
+  </div>
+  <!-- end .top-bg -->
+  
+  <div class="explore-box">
+    <div class="max-1256">
+      <app-sd-explore-our-api-offering
+        *ngIf="dataList"
+        [dataList]="dataList['Explore Our API Offering']">
+      </app-sd-explore-our-api-offering>
+    </div>
+  </div>
+  <!-- end .explore-box -->
+
+  <div class="explore-box">
+    <div class="max-1256">
+      <div class="left-top">
+        <div class="blue-points"></div>
+        <div class="blue-block"></div>
+      </div>
+      <div class="ab-left"></div>
+      <app-sd-build-for-developers>
+      </app-sd-build-for-developers>
+    </div>
+  </div>
+  <!-- end .explore-box -->
+  <div class="explore-box">
+    <div class="max-1256">
+      <div class="ab-left-blue"></div>
+      <div class="ab-right-bottom"></div>
+      <app-sd-trusted-by-the-largest-company>
+      </app-sd-trusted-by-the-largest-company>
+    </div>
+  </div>
+  <!-- end .explore-box -->
+  <div class="explore-box bg-lightgray">
+    <div class="max-1256">
+      <app-sd-news-and-event>
+      </app-sd-news-and-event>
+    </div>
+  </div>
+  <!-- end .explore-box -->
+  
+  <app-sd-footer-non-login></app-sd-footer-non-login>
+</div>
+<!--end .main-content-->

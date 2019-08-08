@@ -1,0 +1,49 @@
+<app-sd-left-sidebar
+  [pageType]="'manage-api-page'">
+</app-sd-left-sidebar>
+<div class="right-content">
+  <app-sd-header-login></app-sd-header-login>
+  
+  <app-sd-manage-api-banner
+    [currentTab]="currentTab"
+    (changeTab)="changeTab($event)"
+    [bannerType]="'default-page'">
+  </app-sd-manage-api-banner>
+  
+  <app-sd-add-manage-api-add-image
+    *ngIf="currentTab === 'Overview' && dataList"
+    (clickUpdate)="clickUpdate($event)"
+    [dataListDropdown]="dataListDropdown"
+    [dataList]="dataList['Overview']"
+    [pageType]="'manage'">
+  </app-sd-add-manage-api-add-image>
+  
+  <app-sd-add-manage-api-add-base-url
+    *ngIf="currentTab === 'Settings' && dataList"
+    (clickDeleteAPI)="clickDeleteAPI($event)"
+    [dataListDropdown]="dataListDropdown"
+    [dataList]="dataList['Settings']"
+    [pageType]="'manage'">
+  </app-sd-add-manage-api-add-base-url>
+  
+  <app-sd-add-manage-api-add-endpoints
+    *ngIf="currentTab === 'Endpoints' && dataList"
+    [dataListDropdown]="dataListDropdown"
+    [dataList]="dataList['Endpoints']"
+    [pageType]="'manage'">
+  </app-sd-add-manage-api-add-endpoints>
+  
+  <app-sd-manage-api-plans-pricing
+    *ngIf="currentTab === 'Plans & Pricing' && dataList"
+    [dataList]="dataList['Plans & Pricing']">
+  </app-sd-manage-api-plans-pricing>
+  
+  <app-sd-manage-api-docs
+    *ngIf="currentTab === 'Docs' && dataList"
+    (clickUpdate)="clickUpdate($event)"
+    [dataList]="dataList['Docs']">
+  </app-sd-manage-api-docs>
+  
+  <app-sd-footer-login></app-sd-footer-login>
+</div>
+<!--end .right-content-->

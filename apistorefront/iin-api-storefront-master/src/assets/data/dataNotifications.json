@@ -1,0 +1,24 @@
+{
+  "notifications": [
+    {
+      "title": "Maintenance",
+      "description": "Maintenance on 06/18/2019 , 05:00 AM",
+      "time": "Today, 10:15 AM"
+    },
+    {
+      "title": "Pending Claims",
+      "description": "AccessFx Merchant status change",
+      "time": "Today, 10:22 AM"
+    },
+    {
+      "title": "BIG Query Update",
+      "description": "BIG Query Update New Documentation",
+      "time": "Today, 11:15 AM"
+    },
+    {
+      "title": "Payment Deadline",
+      "description": "Payment Deadline for JUNE 2019",
+      "time": "Today, 11:15 AM"
+    }
+  ]
+}

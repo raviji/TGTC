@@ -1,0 +1,32 @@
+<a [routerLink]="['/login']" class="red-border" *ngIf="!isLoggedIn">
+  <i class="icon icon-must"></i>
+  <span class="txt">
+    You must login to access this feature !
+  </span>
+</a>
+<!--end .red-border-->
+
+<ng-container *ngIf="isLoggedIn">
+  <h2 class="title">Available Package</h2>
+  <div class="avail-box">
+    <div class="scroll clearfix"
+      [style.width]="dataList.length * 457 + 'px'">
+      <div class="box"
+        *ngFor="let item of dataList;let i = index">
+        <div class="plane">
+          <div class="num">${{item['subscriptionPrice']}}</div>
+          <div class="price">{{item['planName']}}</div>
+          <div class="txt-box">
+            <p>
+              {{item['planDescriptions']}}
+            </p>
+            <a [routerLink]="['/dashboard']" class="btn">
+              SUBSCRIBE
+            </a>
+          </div>
+        </div>
+        <!-- end .plane -->
+      </div>
+    </div>
+  </div>
+</ng-container>

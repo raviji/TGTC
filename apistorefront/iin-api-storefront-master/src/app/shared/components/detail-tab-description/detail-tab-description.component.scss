@@ -1,0 +1,34 @@
+@import '../../../../styles/variables';
+
+.flex-data {
+  display: flex;
+  -webkit-display: flex;
+  -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 45px;
+    .data {
+      .tit {
+      color: $black;
+      font-size: 19px;
+      font-weight: 700;
+      }
+      .data {
+      color: #7e8085;
+      font-size: 19px;
+      font-weight: 400;
+      }
+      .icon-star {
+        display: inline-block;
+        width: 16px;
+        height: 15px;
+        background: url(/assets/i/star-yellow.svg);
+        background-size: 100%;
+      }
+    }
+}
+
+.txt-p {
+  color: #7e8085;
+  font-size: 19px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,116 @@
+@import '../../../../../styles/variables';
+
+.center-down {
+    position: relative;
+    margin-top: 60px;
+    .drop-inputs {
+        width: 523px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+        .btn-blue {
+            flex: 0 0 179px;
+            max-width: 179px;
+            min-width: 1px;
+            height: 75px;
+            line-height: 75px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+    
+    .drop-lang {
+        padding: 0;
+        height: 75px;
+        border-radius: 5px;
+        border: 2px solid #c9cdd5;
+        background-color: #ffffff;
+        border-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        padding: 0 18px;
+        flex: 1;
+        .links {
+            line-height: 75px;
+            padding-right: 33px;
+            position: relative;
+            font-size: 18px;
+            height: 100%;
+            display: block;
+            .icon-country {
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                vertical-align: middle;
+                &.icon-us {
+                    background: url(/assets/i/united-states.svg) left center no-repeat;
+                    background-size: 100%;
+                    margin-right: 16px;
+                }
+            }
+            .lang {
+                line-height: 25px;
+                color: #54565a;
+                font-size: 18px;
+            }
+            .icon-drop {
+                background: url(/assets/i/icon-drop.svg) center center no-repeat;
+                background-size: 8px auto;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                margin-top: -10px;
+            }
+        }
+        &.open {
+            .drop-menu {
+                display: block;
+            }
+        }
+        .drop-menu {
+            display: none;
+            border: 2px solid #c9cdd5;
+            background-color: #fff;
+            border-radius: 3px;
+            margin-top: -2px;
+            width: 523px;
+            min-width: 523px;
+            overflow: hidden;
+            position: absolute;
+            z-index: 1000;
+            top: 100%;
+            left: 0;
+            ul {
+                li {
+                    .drop-item {
+                        display: block;
+                        display: block;
+                        width: 100%;
+                        padding: 0.25rem 1.5rem;
+                        clear: both;
+                        font-weight: 400;
+                        font-size: 16px;
+                        padding: 16px 16px 16px 14px;
+                        color: #000;
+                        &:hover {
+                            background-color: #f8f9fa;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.red-points {
+    position: absolute;
+    right: 151px;
+    bottom: -54px;
+    background: url(/assets/i/points-red.png) 0 0 no-repeat;
+    background-size: 212px auto;
+    width: 212px;
+    height: 210px;
+}

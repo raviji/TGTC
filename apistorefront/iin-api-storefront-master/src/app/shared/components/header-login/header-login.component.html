@@ -1,0 +1,52 @@
+<header class="header flex-grid">
+  <div class="search-module">
+    <div class="inputs">
+      <a href="javascript:;" class="btn-search"></a>
+      <input type="text" placeholder="Search..." />
+    </div>
+  </div>
+  <!--end .search-module-->
+  <div class="user-area">
+    <div class="photos">
+      <a [routerLink]="['/profile']" class="btn-photo">
+        <span class="txt">{{userName}}</span>
+        <span class="photo" placement="bottom" ngbTooltip="Profile">
+          <img src="/assets/i/user-photo.png" alt="photo" />
+        </span>
+      </a>
+      <div class="notifi-wrapper"
+        *ngIf="dataList"
+        (clickOutside)="showNotification = false;">
+        <a href="javascript:;" class="btn-ring" placement="bottom" ngbTooltip="Notifications"
+          (click)="showNotification = !showNotification">
+          <i class="red-point"></i>
+        </a>
+        <div class="modal-noti"
+          *ngIf="showNotification">
+          <a href="javascript:;" class="btn-close"
+            (click)="showNotification = false;">
+          </a>
+          <h2 class="title">NOTIFICATION</h2>
+          <ul class="list">
+            <li
+              *ngFor="let item of dataList['notifications']">
+              <a href="javascript:;" class="tit">
+                {{item['title']}}
+              </a>
+              <span class="txt">
+                {{item['description']}}
+              </span>
+              <span class="date">
+                {{item['time']}}
+              </span>
+            </li>
+          </ul>
+        </div>
+        <!-- end .modal-noti -->
+      </div>
+      <a (click)="clickLogout()" class="log-out" placement="bottom" ngbTooltip="Logout"></a>
+    </div>
+  </div>
+  <!--end .user-area-->
+</header>
+<!-- end header -->

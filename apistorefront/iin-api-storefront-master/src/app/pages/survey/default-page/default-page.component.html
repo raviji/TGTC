@@ -1,0 +1,19 @@
+<app-sd-left-steps
+  *ngIf="!showThankYou && dataList"
+  (clickNext)="clickNext($event)"
+  [dataList]="dataList['Survey']"
+  [currentIndex]="currentIndex">
+</app-sd-left-steps>
+
+<div class="right-content"
+  *ngIf="!showThankYou && dataList">
+  <app-sd-right-question
+    [dataList]="dataList['Survey']"
+    [currentIndex]="currentIndex">
+  </app-sd-right-question>
+</div>
+<!-- end .right-content -->
+
+<app-sd-thank-you-form
+  *ngIf="showThankYou">
+</app-sd-thank-you-form>

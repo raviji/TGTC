@@ -1,0 +1,64 @@
+@import '../../../../../styles/variables';
+
+//.tab-content
+.tab-content {
+    padding-top: 17px;
+    padding-left: 28px;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 17px;
+    .plane {
+        width: 296px;
+        height: 262px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+        border-radius: 2px;
+        background-color: $white;
+        margin: 17px 34px;
+        position: relative;
+        .icon {
+            display: block;
+            position: absolute;
+            right: 14px;
+            top: 7px;
+        }
+        .tit {
+            height: 52px;
+            line-height: 52px;
+            border-bottom: solid 1px #ddd;
+            padding-left: 20px;
+            color: $black;
+            font-size: 12px;
+            font-weight: 600;
+            padding-right: 50px;
+            overflow: hidden;
+            display: block;
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+        .row-line {
+            padding: 14px 16px;
+            &.border-b {
+                border-bottom: solid 1px #ddd;
+            }
+            .sm-tit {
+                color: rgba(0, 0, 0, 0.5);
+                font-size: 12px;
+                margin-bottom: 8px;
+            }
+            .data {
+                line-height: 30px;
+                color: $black;
+                font-size: 24px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            .name {
+                color: $black;
+                font-size: 12px;
+            }
+        }
+    }
+}

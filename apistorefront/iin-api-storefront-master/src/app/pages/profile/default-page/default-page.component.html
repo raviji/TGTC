@@ -1,0 +1,17 @@
+<app-sd-left-sidebar
+  [pageType]="'profile-page'">
+</app-sd-left-sidebar>
+<div class="right-content">
+  <app-sd-header-login></app-sd-header-login>
+  
+  <div class="wrapper-main">
+    <app-sd-profile-form
+      *ngIf="dataList"
+      [dataList]="dataList">
+    </app-sd-profile-form>
+    
+    <app-sd-footer-login></app-sd-footer-login>
+  </div>
+  <!--end .wrapper-->
+</div>
+<!--end .right-content-->

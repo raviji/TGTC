@@ -1,0 +1,212 @@
+@import '../../../../styles/variables';
+
+//.red-border
+.red-border {
+    border-radius: 2px;
+    border: 2px solid #ec6568;
+    background-color: #ffffff;
+    height: 90px;
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    .icon-must {
+        background: url(/assets/i/icon-must.svg) center center no-repeat;
+        background-size: 49px;
+        width: 49px;
+        height: 49px;
+        margin-right: 30px;
+    }
+    .txt {
+        color: #80828c;
+        font-size: 19px;
+        font-weight: 700;
+    }
+}
+
+.title-bold {
+  color: $black;
+  font-family: "ProximaNovaRegular";
+  font-size: 19px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+.select-box {
+  margin-bottom: 75px;
+  display: flex;
+  -webkit-display: flex;
+  &.mb-0 {
+    margin-bottom: 0;
+  }
+  label {
+    color: $black;
+    font-family: "ProximaNovaRegular";
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 64px;
+    margin-right: 35px;
+    &.h-47 {
+      line-height: 47px;
+      margin-right: 10px;
+    }
+  }
+  .w-312 {
+    width: 312px;
+  }
+  .w-272 {
+    width: 272px;
+    .btn {
+        &.btn-outline-primary {
+            height: 47px;
+        }
+    }
+  }
+}
+.select-list {
+  .item {
+    margin-right: 60px;
+    margin-bottom: 29px;
+    background-color: $white;
+  }
+  .select {
+    height: 76px;
+    padding: 16px;
+    display: flex;
+    -webkit-display: flex;
+    &.border-blue {
+      border: 1px solid $blueBorderColor;
+    }
+    &.border-green {
+      border: 1px solid #26aa44;
+    }
+    .tag {
+      display: inline-block;
+      width: 103px;
+      height: 43px;
+      border-radius: 2px;
+      text-align: center;
+      line-height: 43px;
+      color: $white;
+      font-size: 19px;
+      text-transform: uppercase;
+      margin-right: 40px;
+      &.bg-blue {
+        border: 1px solid $blueBorderColor;
+        background-color: $blueBorderColor;
+      }
+      &.bg-green {
+        border: 1px solid #26aa44;
+        background-color: #26aa44;
+      }
+    }
+    .value {
+      flex: 1;
+      color: $black;
+      font-family: "ProximaNovaRegular";
+      font-size: 19px;
+      font-weight: 700; 
+      line-height: 43px;
+    }
+    .btn-arrow {
+      width: 18px;
+      height: 10px;
+      margin-top: 18px;
+      &.expanded {
+          transform: rotateX(180deg);
+      }
+    }
+    .arrow-blue {
+      background: url(/assets/i/arrow-bottom-blue.svg);
+      background-size: 100%;
+    }
+    .arrow-green {
+      background: url(/assets/i/arrow-bottom-green.svg);
+      background-size: 100%;
+    }
+  }
+  .group-code {
+    border: 1px solid $blueBorderColor;
+    border-top: none; 
+    .code-top {
+      padding: 16px 54px 13px 34px;
+      border-bottom: solid 1px $blueBorderColor;
+      display: flex;
+      -webkit-display: flex;
+      -webkit-justify-content: space-between;
+        justify-content: space-between;
+      span {
+        line-height: 42px;
+        color: #0b0b0b;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .btn-try {
+        width: 152px;
+        height: 42px;
+        border-radius: 1px;
+        border: 1px solid $blueTextColor;
+        text-align: center;
+        line-height: 40px;
+        color: $blueTextColor;
+        font-size: 12px;
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+    }
+    .code-main {
+      padding: 23px 34px 3px 34px;
+      .tit-bold {
+        color: $black;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .data-list {
+        margin-top: 28px;
+        li {
+          margin-bottom: 28px;
+          span {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 5px;
+            color: $black;
+          }
+          .value {
+            font-weight: 700;
+          }
+          .tips {
+            color: #97a4b0;
+          }
+          .color-red {
+            color: #fc5c42;
+            padding-left: 10px;
+          }
+        }
+      }
+      pre {
+        &.mb-48 {
+          margin-bottom: 10px;
+        }
+        background-color: #41444e;
+        padding: 13px 26px;
+        border-radius: 2px;
+        color: $white;
+        font-family: "ProximaNovaRegular";
+        font-size: 16px;
+      }
+      .bottom-btn {
+        .w-219 {
+          width: 219px;
+          min-width: auto;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        span {
+          background: url(/assets/i/icon-copy.svg) left center no-repeat;
+          background-size: 20px;
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+}

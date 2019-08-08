@@ -1,0 +1,80 @@
+@import '../../../../../styles/variables';
+
+.left-fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 482px;
+  background-color: $white;
+  padding: 94px 40px 20px 60px;
+  .title {
+    color: $blueTextColor;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 47px;
+    background: url(/assets/i/logo-iinapi.svg) left center no-repeat;
+    background-size: 45px 47px;
+    padding-left: 65px;
+    margin-bottom: 48px;
+  }
+  .sm-title {
+    color: $black;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 34px;
+  }
+  .txt {
+    margin-bottom: 34px;
+    p {
+      color: $darkBlue;
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+  }
+  .progress-box {
+    margin-bottom: 56px;
+    .tips {
+      color: #7f7f7f;
+      font-size: 16px;
+      margin-bottom: 13px;
+    }
+    .progress {
+      height: 12px;
+      border-radius: 6px;
+      background-color: #d8d8d8;
+      .percent {
+        height: 100%;
+        border-radius: 6px;
+        background-color: $blueTextColor;
+      }
+    }
+  }
+  .bottom-btn {
+    .btn-blue-border {
+      width: 253px;
+      border: 1px solid $blueTextColor; 
+      color: $blueTextColor;
+      font-family: "ProximaNovaRegular";
+      font-weight: 400;
+      pointer-events: none;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .left-fixed {
+    width: 300px;
+    padding: 60px 20px 20px 30px;
+    .title {
+      margin-bottom: 30px;
+    }
+    .bottom-btn {
+      .btn-blue {
+        width: 180px;
+        min-width: auto;
+      }
+    }
+  }
+}

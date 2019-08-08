@@ -1,0 +1,125 @@
+@import '../../../../styles/variables';
+
+.banner {
+  min-height: 392px;
+  background-image: linear-gradient(147deg, $darkBlue 0%, $blueTextColor 100%);
+  padding: 32px 34px 0 60px;
+  &.h-227 {
+    min-height: 227px;
+  }
+    .back {
+      margin-bottom: 16px;
+      .btn-back {
+      color: $white;
+      font-size: 16px;
+      background: url(/assets/i/arrow-left-white.svg) left center no-repeat;
+      background-size: 6px 12px;
+      padding-left: 33px;
+      &:hover {
+        opacity: 0.85;
+      }
+      }
+    }
+    .flex {
+      display: flex;
+    -webkit-display: flex;
+    -webkit-justify-content: space-between;
+      justify-content: space-between;
+    }
+    .txt-box {
+      margin-right: 43px;
+      flex: 1;
+      .title {
+      color: $white;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 37px;
+      }
+      p {
+      color: $white;
+      font-size: 16px;
+      }
+    }
+    .risk-img {
+      height: 246px;
+      img {
+        height: 100%;
+      }
+    }
+}
+
+.tab-boxs {
+  margin: 35px 28px 0 60px;
+  .tab {
+    border-bottom: 2px solid #e7eaee;
+    height: 54px;
+    display: flex;
+    -webkit-display: flex;
+    -webkit-justify-content: space-between;
+      justify-content: space-between;
+      padding-right: 60px;
+      a {
+      color: #2c2e30;
+      font-size: 21px;
+      height: 54px;
+      &.active {
+        border-bottom: 2px solid $blueBg;
+      }
+      &:hover {
+        opacity: 0.85;
+      }
+      }
+  }
+  .tab-body {
+    padding-top: 45px;
+  }
+  
+  .tab-panel {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .banner {
+    height: 320px;
+    padding: 32px 20px 0 30px;
+      .txt-box {
+        margin-right: 30px;
+        .title {
+        font-size: 30px;
+        margin-bottom: 20px;
+        }
+      }
+      .risk-img {
+        height: 200px;
+      }
+  }
+  .tab-boxs {
+    margin: 25px 28px 0 30px;
+      .tab {
+          padding-right: 20px;
+      }
+      .tab-body {
+        padding-top: 30px;
+      }
+      
+      .tab-panel {
+        .flex-data {
+            margin-bottom: 30px;
+            .data {
+              .tit {
+              font-size: 15px;
+              }
+              .data {
+              font-size: 15px;
+              }
+            }
+        }
+        .group {
+          .tit {
+            margin-bottom: 22px;
+          }
+        }
+      }
+    }
+}

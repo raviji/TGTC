@@ -1,0 +1,69 @@
+{
+  "Overview": {
+    "imgUrl": "/assets/i/bar-graph.png",
+    "apiName": "CRYPTOCOIN SIGNAL",
+    "website": "https://api.signalcrypto.asia",
+    "shortDescription": "ALL CRYPTOCURRENCY CHANGE SIGNAL INFO",
+    "categories": "Finance",
+    "longDescription": "Access the world's most comprehensive cryptocurrency dataset from CoinGecko",
+    "termOfUse": "Version 1.0\n\nThe cryptosignal.dojo.asia website located at http://cryptosignal.dojo.asia is a copyrighted work belonging to CRYPTOSIGNAL. Certain features of the Site may be subject to additional guidelines, terms, or rules, which will be posted on the Site in connection with such features."
+  },
+  "Settings": {
+    "baseURL": "https://api.signalcrypto.asia/api-v1/",
+    "baseURLFirewallSettings": "X-IINAPI-Proxy-Secret: ad6f43a0-892b-11e9-858b-dda31503c440",
+    "authentication": "Use IINAPI Authentication",
+    "secretHeaderOrParameterList": [
+      {
+        "key": "Key 1",
+        "value": "Value 1"
+      },
+      {
+        "key": "Key 2",
+        "value": "Value 2"
+      }
+    ],
+    "apiVisibility": true
+  },
+  "Endpoints": {
+    "groupsList": [
+      {
+        "group": "CryptoCall"
+      },
+      {
+        "group": "CryptoInput"
+      }
+    ],
+    "endpointsList": [
+      {
+        "endpoint": "https://api.signalcrypto.asia/api-v1/get-btc",
+        "group": "CryptoCall",
+        "method": "GET",
+        "description": "BITCOIN DATA"
+      },
+      {
+        "endpoint": "https://api.signalcrypto.asia/api-v1/get-eth",
+        "group": "CryptoCall",
+        "method": "GET",
+        "description": "ETHEREUM DATA"
+      },
+      {
+        "endpoint": "https://api.signalcrypto.asia/api-v1/report",
+        "group": "CryptoInput",
+        "method": "POST",
+        "description": "REPORT ERROR DATA"
+      }
+    ]
+  },
+  "Plans & Pricing": [
+    {
+      "planType": "Monthly Subscription",
+      "subscriptionPrice": "0",
+      "planName": "12.000 Query",
+      "planDescriptions": "No one cares about products. People care about ideas. Is a product an idea? Noup. Is a brand? A good one is."
+    }
+  ],
+  "Docs": {
+    "Brief Description": "Brief Description Sample Text",
+    "Documentation": "Documentation Sample Text"
+  }
+}

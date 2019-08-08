@@ -1,0 +1,49 @@
+@import '../../../../../styles/variables';
+
+//.login-main
+.login-main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .center {
+        text-align: center;
+        width: 559px;
+        margin-top: 75px;
+    }
+    .logo-area {
+        padding-left: 65px;
+        color: $darkBlue;
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 50px;
+        background: url(/assets/i/icon-logo.svg) left center no-repeat;
+        background-size: 45px auto;
+        display: inline-block;
+        margin-bottom: 115px;
+    }
+    .login-title {
+        margin-bottom: 40px;
+        .left-txt {
+            line-height: 49px;
+            color: $black;
+            font-size: 36px;
+            font-weight: 700;
+        }
+    }
+    
+    .thank-you-form {
+        p {
+            color: $darkBlue;
+            font-size: 16px;
+            text-align: left;
+            margin-top: -15px;
+            margin-bottom: 25px;
+        }
+        .btn-blue {
+            width: 100%;
+            margin-top: 35px;
+            background-color: $blueBg;
+        }
+    }
+}

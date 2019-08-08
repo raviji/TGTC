@@ -1,0 +1,51 @@
+<div class="tab-contents">
+  <div class="form-box">
+    <div class="form-title">ADD NEW API</div>
+    <form [formGroup]="formGroup">
+      <div class="input-control">
+        <label>API Name <em class="color-red">*</em></label>
+        <div class="inputs w-559"
+          [ngClass]="{'error': submitted && f.apiName.errors}">
+          <input type="text" placeholder="Your API's Name" 
+            formControlName="apiName"/>
+        </div>
+      </div>
+      <!-- end .input-control -->
+      <div class="input-control">
+        <label>Short Description <em class="color-red">*</em></label>
+        <div class="inputs w-559"
+          [ngClass]="{'error': submitted && f.shortDescription.errors}">
+          <input type="text" placeholder="Describe Your API"
+            formControlName="shortDescription"/>
+        </div>
+      </div>
+      <!-- end .input-control -->
+      <div class="input-control">
+        <label>Categories <em class="color-red">*</em></label>
+        <div ngbDropdown class="d-inline-block w-559"
+          *ngIf="dataListDropdown"
+          [ngClass]="{ 'error': submitted && (addAPIFormData['categories'] === '')}"
+          [class.default-text]="addAPIFormData['categories'] === ''">
+          <button class="btn btn-outline-primary" ngbDropdownToggle>
+            {{addAPIFormData['categories'] !== '' ? addAPIFormData['categories'] : 'Select Categories'}}
+          </button>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem class="dropdown-item"
+              *ngFor="let optionItem of dataListDropdown['categoriesDropdown']"
+              (click)="addAPIFormData['categories'] = optionItem['option']">
+              {{optionItem['option']}}
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- end .input-control -->
+      <a href="javascript:;" class="btn-submit"
+        (click)="addAPI()">
+        ADD API
+      </a>
+      <div class="bottom-tips">Your API will be Private by default</div>
+    </form>
+  </div>
+  <!-- end .form-box -->
+</div>
+<!--end .tab-contents-->

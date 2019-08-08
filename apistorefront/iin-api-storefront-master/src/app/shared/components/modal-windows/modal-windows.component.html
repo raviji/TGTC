@@ -1,0 +1,199 @@
+<div class="modal modal-plan-type"
+  *ngIf="(modalData['name'] === 'addPlanType') || (modalData['name'] === 'editPlanType')">
+  <form class="modal-content" [formGroup]="formGroup">
+    <div class="input-control mb-12">
+      <label for="">Plan Type <em>*</em></label>
+      <div class="radio-group"
+        [ngClass]="{'error': submitted && f.planType.errors}">
+        <div class="radio-wrap">
+          <input type="radio" id="monthly" value="Monthly Subscription"
+            formControlName="planType">
+          <label for="monthly" class="radio-label">
+            Monthly Subscription
+          </label>
+        </div>
+        <div class="radio-wrap">
+          <input type="radio" id="use" value="Pay Per Use"
+            formControlName="planType">
+          <label for="use" class="radio-label">
+            Pay Per Use
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- end .input-control -->
+    
+    <div class="input-control mb-56">
+      <label for="">Subscription Price <em>*</em></label>
+      <div class="inputs padding-74"
+        [ngClass]="{'error': submitted && f.subscriptionPrice.errors}">
+        <input type="text" placeholder="$0" class="text-right"
+          formControlName="subscriptionPrice"/>
+        <a href="javascript:;" class="icon icon-mins"
+          (click)="clickMinus()">
+          <i></i>
+        </a>
+        <a href="javascript:;" class="icon icon-plus"
+          (click)="clickPlus()">
+          <i></i>
+        </a>
+      </div>
+    </div>
+    <!-- end .input-control -->
+    <div class="input-control">
+      <label for="">Plan Name <em>*</em></label>
+      <div class="inputs"
+        [ngClass]="{'error': submitted && f.planName.errors}">
+        <input type="text" placeholder="Your API's Name"
+          formControlName="planName"/>
+      </div>
+    </div>
+    <!-- end .input-control -->
+    <div class="input-control">
+      <label for="">Plan Descriptions<em>*</em></label>
+      <div class="textareas"
+        [ngClass]="{'error': submitted && f.planDescriptions.errors}">
+        <textarea placeholder="Your API's Name" maxlength="200"
+          formControlName="planDescriptions">
+        </textarea>
+      </div>
+    </div>
+    <!-- end .input-control -->
+    <div class="bottom-btn">
+      <a href="javascript:;" class="btn btn-blue-border"
+        (click)="clickClose()">
+        CANCEL
+      </a>
+      <a href="javascript:;" class="btn btn-blue"
+        (click)="clickSavePlanType()">
+        {{modalData['name'] === 'addPlanType' ? 'CREATE' : 'SAVE'}}
+      </a>
+    </div>
+  </form>
+</div>
+<!-- end .modal -->
+
+<div class="modal modal-group"
+  *ngIf="(modalData['name'] === 'addGroup') || (modalData['name'] === 'editGroup')">
+  <form class="modal-content" [formGroup]="formGroup">
+    <div class="input-control">
+      <label for="">Group Name <em>*</em></label>
+      <div class="inputs"
+        [ngClass]="{'error': submitted && f.group.errors}">
+        <input type="text" placeholder="Group Name"
+          formControlName="group"/>
+      </div>
+    </div>
+    <!-- end .input-control -->
+    <div class="bottom-btn">
+      <a href="javascript:;" class="btn btn-blue-border"
+        (click)="clickClose()">
+        Cancel
+      </a>
+      <a href="javascript:;" class="btn btn-blue"
+        (click)="clickSaveGroup()">
+        SAVE
+      </a>
+    </div>
+  </form>
+</div>
+<!-- end .modal -->
+
+<div class="modal modal-endpoint"
+  *ngIf="(modalData['name'] === 'addEndpoint') || (modalData['name'] === 'editEndpoint')">
+  <form class="modal-content" [formGroup]="formGroup">
+    <div class="input-control">
+      <label for="">Endpoint Value <em>*</em></label>
+      <div class="inputs"
+        [ngClass]="{'error': submitted && f.endpoint.errors}">
+        <input type="text" placeholder="Endpoint Value"
+          formControlName="endpoint"/>
+      </div>
+    </div>
+    <!-- end .input-control -->
+    <div class="input-control">
+      <label for="">Group Names <em>*</em></label>
+      <div ngbDropdown class="d-inline-block"
+        *ngIf="dataListDropdown"
+        [ngClass]="{ 'error': submitted && (modalData['data']['group'] === '')}"
+        [class.default-text]="modalData['data']['group'] === ''">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>
+          {{modalData['data']['group'] !== '' ? modalData['data']['group'] : 'Select Group Name'}}
+        </button>
+        <div ngbDropdownMenu>
+          <button ngbDropdownItem class="dropdown-item"
+            *ngFor="let optionItem of dataListDropdown['groupDropdown']"
+            (click)="modalData['data']['group'] = optionItem['option']">
+            {{optionItem['option']}}
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- end .input-control -->
+    <div class="input-control">
+      <label for="">Method Name <em>*</em></label>
+      <div class="inputs"
+        [ngClass]="{'error': submitted && f.method.errors}">
+        <input type="text" placeholder="Method Name"
+          formControlName="method"/>
+      </div>
+    </div>
+    <!-- end .input-control -->
+    <div class="input-control">
+      <label for="">Description <em>*</em></label>
+      <div class="textareas small"
+        [ngClass]="{'error': submitted && f.description.errors}">
+        <textarea placeholder="Description" maxlength="200"
+          formControlName="description">
+        </textarea>
+      </div>
+    </div>
+    <!-- end .input-control -->
+    <div class="bottom-btn">
+      <a href="javascript:;" class="btn btn-blue-border"
+        (click)="clickClose()">
+        Cancel
+      </a>
+      <a href="javascript:;" class="btn btn-blue"
+        (click)="clickSaveEndpoint()">
+        Save
+      </a>
+    </div>
+  </form>
+</div>
+<!-- end .modal -->
+
+<div class="modal modal-group"
+  *ngIf="(modalData['name'] === 'addSecretHeaderOrParameter') || (modalData['name'] === 'editSecretHeaderOrParameter')">
+  <form class="modal-content" [formGroup]="formGroup">
+    <div class="input-control">
+      <label for="">Key <em>*</em></label>
+      <div class="inputs"
+        [ngClass]="{'error': submitted && f.key.errors}">
+        <input type="text" placeholder="Key"
+          formControlName="key"/>
+      </div>
+    </div>
+    <!-- end .input-control -->
+    <div class="input-control">
+      <label for="">Value <em>*</em></label>
+      <div class="inputs"
+        [ngClass]="{'error': submitted && f.value.errors}">
+        <input type="text" placeholder="Value"
+          formControlName="value"/>
+      </div>
+    </div>
+    <!-- end .input-control -->
+    <div class="bottom-btn">
+      <a href="javascript:;" class="btn btn-blue-border"
+        (click)="clickClose()">
+        Cancel
+      </a>
+      <a href="javascript:;" class="btn btn-blue"
+        (click)="clickSaveSecretHeaderOrParameter()">
+        SAVE
+      </a>
+    </div>
+  </form>
+</div>
+<!-- end .modal -->

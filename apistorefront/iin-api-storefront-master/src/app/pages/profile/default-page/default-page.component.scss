@@ -1,0 +1,12 @@
+@import '../../../../styles/variables';
+
+// .wrapper-main
+.wrapper-main {
+    padding: 32px 60px;
+    .top-label {
+        color: $black;
+        font-size: 23px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}

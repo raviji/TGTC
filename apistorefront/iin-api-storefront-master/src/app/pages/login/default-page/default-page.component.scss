@@ -1,0 +1,106 @@
+@import '../../../../styles/variables';
+
+//.login-main
+.login-main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .center {
+        text-align: center;
+        width: 559px;
+    }
+    .logo-area {
+        padding-left: 65px;
+        color: $darkBlue;
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 50px;
+        background: url(/assets/i/icon-logo.svg) left center no-repeat;
+        background-size: 45px auto;
+        display: inline-block;
+        margin-bottom: 98px;
+    }
+    .login-title {
+        margin-bottom: 40px;
+        .left-txt {
+            line-height: 49px;
+            color: $black;
+            font-size: 36px;
+            font-weight: 700;
+        }
+        .blue-link {
+            height: 23px;
+            color: $darkBlue;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 23px;
+            padding-right: 13px;
+            &.right-arrow {
+                background: url(/assets/i/icon-right-arrow.svg) right center no-repeat;
+            }
+        }
+    }
+}
+//.line
+.line {
+    padding: 45px 0 58px;
+    .lefts,
+    .rights {
+        height: 1px;
+        background-color: #979797;
+        width: 176px;
+    }
+    .center-txt {
+        color: #003552;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23px;
+        display: inline-block;
+    }
+}
+//.three-items
+.three-items {
+    margin-top: 0;
+    padding-bottom: 30px;
+    .items {
+        height: 54px;
+        border-radius: 5px;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 28px;
+        flex: 1;
+        &:last-child {
+            margin-right: 0;
+        }
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            &.icon-git {
+                background: url(/assets/i/git-icon.svg) center center no-repeat;
+                background-size: 100%;
+                width: 27px;
+                height: 25px;
+            }
+            &.icon-google {
+                background: url(/assets/i/google-svg.svg) center center no-repeat;
+                background-size: 100%;
+                width: 25px;
+                height: 26px;
+            }
+        }
+        .txt {
+            height: 20px;
+            color: $darkBlue;
+            font-family: "ProximaNovaRegular";
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+}

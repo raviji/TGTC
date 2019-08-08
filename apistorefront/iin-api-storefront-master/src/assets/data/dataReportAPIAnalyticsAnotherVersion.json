@@ -1,0 +1,362 @@
+[
+  {
+    "title": "Risk Scoring",
+    "api-calls": {
+      "data": [
+        {
+          "date": "1/1/2017",
+          "andriodNumber": 40,
+          "paymentNumber": 50
+        },
+        {
+          "date": "2/1/2017",
+          "andriodNumber": 85,
+          "paymentNumber": 40
+        },
+        {
+          "date": "3/1/2017",
+          "andriodNumber": 90,
+          "paymentNumber": 70
+        },
+        {
+          "date": "4/1/2017",
+          "andriodNumber": 153,
+          "paymentNumber": 60
+        },
+        {
+          "date": "5/1/2017",
+          "andriodNumber": 90,
+          "paymentNumber": 130
+        },
+        {
+          "date": "6/1/2017",
+          "andriodNumber": 130,
+          "paymentNumber": 158
+        }
+      ]
+    },
+    "no error statistic": {
+      "title": "95,99%",
+      "data": [
+        {
+          "date": "1/1/2017",
+          "andriodNumber": 0.960,
+          "paymentNumber": 0.965
+        },
+        {
+          "date": "2/1/2017",
+          "andriodNumber": 0.958,
+          "paymentNumber": 0.943
+        },
+        {
+          "date": "3/1/2017",
+          "andriodNumber": 0.958,
+          "paymentNumber": 0.960
+        },
+        {
+          "date": "4/1/2017",
+          "andriodNumber": 0.999,
+          "paymentNumber": 0.990
+        },
+        {
+          "date": "5/1/2017",
+          "andriodNumber": 0.955,
+          "paymentNumber": 0.976
+        },
+        {
+          "date": "6/1/2017",
+          "andriodNumber": 0.985,
+          "paymentNumber": 0.974
+        }
+      ]
+    },
+    "billing": {
+      "title": "$4,221",
+      "data": [
+        {
+          "date": "1/1/2017",
+          "andriodNumber": 800,
+          "paymentNumber": 300
+        },
+        {
+          "date": "2/1/2017",
+          "andriodNumber": 750,
+          "paymentNumber": 650
+        },
+        {
+          "date": "3/1/2017",
+          "andriodNumber": 950,
+          "paymentNumber": 550
+        },
+        {
+          "date": "4/1/2017",
+          "andriodNumber": 1200,
+          "paymentNumber": 1000
+        },
+        {
+          "date": "5/1/2017",
+          "andriodNumber": 650,
+          "paymentNumber": 950
+        },
+        {
+          "date": "6/1/2017",
+          "andriodNumber": 820,
+          "paymentNumber": 1250
+        }
+      ]
+    },
+    "latency": {
+      "title": "13 ms",
+      "data": [
+        {
+          "date": "1/1/2017",
+          "andriodNumber": 12,
+          "paymentNumber": 7
+        },
+        {
+          "date": "2/1/2017",
+          "andriodNumber": 14,
+          "paymentNumber": 10
+        },
+        {
+          "date": "3/1/2017",
+          "andriodNumber": 17,
+          "paymentNumber": 12
+        },
+        {
+          "date": "4/1/2017",
+          "andriodNumber": 25,
+          "paymentNumber": 22
+        },
+        {
+          "date": "5/1/2017",
+          "andriodNumber": 14,
+          "paymentNumber": 19
+        },
+        {
+          "date": "6/1/2017",
+          "andriodNumber": 14,
+          "paymentNumber": 18
+        }
+      ]
+    },
+    "error event trends": {
+      "titleError": "70",
+      "titleSmallError": "-4.8%",
+      "titleUser affected": "43",
+      "titleSmallUser affected": "-15,2%",
+      "data": [
+        {
+          "date": "1/1/2017",
+          "andriodNumber": 9,
+          "paymentNumber": 10
+        },
+        {
+          "date": "2/1/2017",
+          "andriodNumber": 12,
+          "paymentNumber": 8
+        },
+        {
+          "date": "3/1/2017",
+          "andriodNumber": 10,
+          "paymentNumber": 10
+        },
+        {
+          "date": "4/1/2017",
+          "andriodNumber": 12,
+          "paymentNumber": 8
+        },
+        {
+          "date": "5/1/2017",
+          "andriodNumber": 10,
+          "paymentNumber": 8
+        },
+        {
+          "date": "6/1/2017",
+          "andriodNumber": 10,
+          "paymentNumber": 8
+        }
+      ]
+    }
+  },
+  {
+    "title": "Big Query Image API",
+    "api-calls": {
+      "data": [
+        {
+          "date": "1/1/2017",
+          "andriodNumber": 80,
+          "paymentNumber": 90
+        },
+        {
+          "date": "2/1/2017",
+          "andriodNumber": 105,
+          "paymentNumber": 70
+        },
+        {
+          "date": "3/1/2017",
+          "andriodNumber": 120,
+          "paymentNumber": 50
+        },
+        {
+          "date": "4/1/2017",
+          "andriodNumber": 123,
+          "paymentNumber": 100
+        },
+        {
+          "date": "5/1/2017",
+          "andriodNumber": 80,
+          "paymentNumber": 100
+        },
+        {
+          "date": "6/1/2017",
+          "andriodNumber": 100,
+          "paymentNumber": 118
+        }
+      ]
+    },
+    "no error statistic": {
+      "title": "75,00%",
+      "data": [
+        {
+          "date": "1/1/2017",
+          "andriodNumber": 0.970,
+          "paymentNumber": 0.985
+        },
+        {
+          "date": "2/1/2017",
+          "andriodNumber": 0.978,
+          "paymentNumber": 0.953
+        },
+        {
+          "date": "3/1/2017",
+          "andriodNumber": 0.958,
+          "paymentNumber": 0.960
+        },
+        {
+          "date": "4/1/2017",
+          "andriodNumber": 0.949,
+          "paymentNumber": 0.950
+        },
+        {
+          "date": "5/1/2017",
+          "andriodNumber": 0.955,
+          "paymentNumber": 0.956
+        },
+        {
+          "date": "6/1/2017",
+          "andriodNumber": 0.975,
+          "paymentNumber": 0.974
+        }
+      ]
+    },
+    "billing": {
+      "title": "$4,321",
+      "data": [
+        {
+          "date": "1/1/2017",
+          "andriodNumber": 800,
+          "paymentNumber": 340
+        },
+        {
+          "date": "2/1/2017",
+          "andriodNumber": 700,
+          "paymentNumber": 720
+        },
+        {
+          "date": "3/1/2017",
+          "andriodNumber": 820,
+          "paymentNumber": 500
+        },
+        {
+          "date": "4/1/2017",
+          "andriodNumber": 1100,
+          "paymentNumber": 1200
+        },
+        {
+          "date": "5/1/2017",
+          "andriodNumber": 800,
+          "paymentNumber": 800
+        },
+        {
+          "date": "6/1/2017",
+          "andriodNumber": 1020,
+          "paymentNumber": 1150
+        }
+      ]
+    },
+    "latency": {
+      "title": "14 ms",
+      "data": [
+        {
+          "date": "1/1/2017",
+          "andriodNumber": 13,
+          "paymentNumber": 10
+        },
+        {
+          "date": "2/1/2017",
+          "andriodNumber": 12,
+          "paymentNumber": 10
+        },
+        {
+          "date": "3/1/2017",
+          "andriodNumber": 15,
+          "paymentNumber": 8
+        },
+        {
+          "date": "4/1/2017",
+          "andriodNumber": 20,
+          "paymentNumber": 20
+        },
+        {
+          "date": "5/1/2017",
+          "andriodNumber": 12,
+          "paymentNumber": 15
+        },
+        {
+          "date": "6/1/2017",
+          "andriodNumber": 19,
+          "paymentNumber": 15
+        }
+      ]
+    },
+    "error event trends": {
+      "titleError": "80",
+      "titleSmallError": "-4.7%",
+      "titleUser affected": "40",
+      "titleSmallUser affected": "-12,2%",
+      "data": [
+        {
+          "date": "1/1/2017",
+          "andriodNumber": 12,
+          "paymentNumber": 12
+        },
+        {
+          "date": "2/1/2017",
+          "andriodNumber": 10,
+          "paymentNumber": 8
+        },
+        {
+          "date": "3/1/2017",
+          "andriodNumber": 10,
+          "paymentNumber": 9
+        },
+        {
+          "date": "4/1/2017",
+          "andriodNumber": 12,
+          "paymentNumber": 10
+        },
+        {
+          "date": "5/1/2017",
+          "andriodNumber": 10,
+          "paymentNumber": 8
+        },
+        {
+          "date": "6/1/2017",
+          "andriodNumber": 10,
+          "paymentNumber": 10
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,37 @@
+<div class="tab-content">
+  <div class="plane"
+    *ngFor="let item of dataList">
+    <img class="icon" alt="img" src="/assets/i/{{item['iconName']}}">
+    <a [routerLink]="['/dashboard/report-api-page/' + item['pageId']]" class="tit">{{item['title']}}</a>
+    <div class="row-line border-b">
+      <div class="sm-tit">Numbers (last 7 days)</div>
+      <div class="row data-box">
+        <div class="col-md-6">
+          <div class="data">{{item['7 days Query']}}</div>
+          <div class="name">Query</div>
+        </div>
+        <div class="col-md-6">
+          <div class="data">${{item['7 days Cost to Pay']}}</div>
+          <div class="name">Cost to Pay</div>
+        </div>
+      </div>
+    </div>
+    <!-- end .row-line -->
+    <div class="row-line">
+      <div class="sm-tit">Numbers (last 30 days)</div>
+      <div class="row data-box">
+        <div class="col-md-6">
+          <div class="data">{{item['30 days Query']}}</div>
+          <div class="name">Query</div>
+        </div>
+        <div class="col-md-6">
+          <div class="data">${{item['30 days Cost to Pay']}}</div>
+          <div class="name">Cost to Pay</div>
+        </div>
+      </div>
+    </div>
+    <!-- end .row-line -->
+  </div>
+  <!-- end.plane -->
+</div>
+<!-- end .tab-content -->

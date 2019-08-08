@@ -1,0 +1,75 @@
+<div class="left-aside">
+  <div class="logo-area">
+    <a [routerLink]="['/dashboard']" class="logo-btn">
+      IINAPI
+    </a>
+  </div>
+  <!--end .logo-area-->
+  <div class="info-items">
+    <div class="grey-title">
+      MAIN MENU
+    </div>
+    <ul class="menu-list">
+      <li>
+        <a [routerLink]="['/dashboard']" class="link-item icon-dashboard current"
+          [class.current]="pageType === 'dashboard-page'">
+          DASHBOARD
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" class="link-item icon-payment">PAYMENT</a>
+      </li>
+      <li>
+        <a [routerLink]="['/profile']" class="link-item icon-profile"
+          [class.current]="pageType === 'profile-page'">
+          PROFILE
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" class="link-item icon-system">SYSTEM STATUS</a>
+      </li>
+    </ul>
+  </div>
+  <!--end .info-items-->
+  <div class="info-items"
+    *ngIf="myAPIList && (userRole !== 'user')">
+    <div class="grey-title">
+      MY APIs
+    </div>
+    <div class="drop-area"
+      *ngFor="let item of myAPIList;let i = index"
+      [class.open]="item['expanded']">
+      <div class="drop-title flex-grid">
+        <span class="left-txt">{{item['apiName']}}</span>
+        <a href="javascript:;" class="btn-arrow"
+          (click)="item['expanded'] = !item['expanded']">
+        </a>
+      </div>
+      <ul class="drop-list">
+        <li>
+          <a href="javascript:;" (click)="clickDefinitionLink(i)" class="link-item"
+            [class.active]="(pageType === 'manage-api-page') && (detailId === i)">
+            DEFINITION
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" (click)="clickAnalyticsLink(i)" class="link-item"
+            [class.active]="(pageType === 'analytics-page') && (detailId === i)">
+            ANALYTICS
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="link-item">USERS</a>
+        </li>
+        <li>
+          <a href="javascript:;" (click)="clickSupportLink(i)" class="link-item"
+            [class.active]="(pageType === 'support-page') && (detailId === i)">
+            SUPPORT
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a [routerLink]="['/add-api']" class="add-api">+ADD NEW API</a>
+  </div>
+  <!--end .info-items-->
+</div>

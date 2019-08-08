@@ -1,0 +1,28 @@
+@import '../../../../../styles/variables';
+
+.contact-form {
+    padding-top: 54px;
+    display: flex;
+    justify-content: space-between;
+    .lefts {
+        margin-right: 40px;
+    }
+    .lefts,
+    .rights {
+        flex: 1;
+    }
+    .row-line {
+        margin-bottom: 18px;
+    }
+    .label-txt {
+        margin-bottom: 16px;
+    }
+    .textareas {
+        margin-bottom: 28px;
+    }
+    .btn-blue {
+        width: 100%;
+        height: 51px;
+        line-height: 51px;
+    }
+}

@@ -1,0 +1,139 @@
+<div class="tab-contents"
+  [class.add]="pageType === 'add'">
+  <div class="info-row">
+    <div class="info-title">
+      Group
+    </div>
+    <div class="grey-txt">
+      If you have many endpoints, create groups and add related endpoints to a group for better presentation on the marketplace.
+    </div>
+    <a href="javascript:;" class="blue-links add-link"
+      (click)="clickAddGroup()">
+      Create Group
+    </a>
+    <div class="table-data little-short"
+      *ngIf="dataList['groupsList'].length > 0">
+      <div class="row-td"
+        *ngFor="let item of dataList['groupsList'];let i = index">
+        <div class="col-td width20">
+          <div class="spacing">#{{i + 1}}</div>
+        </div>
+        <div class="col-td ">
+          <div class="spacing">{{item['group']}}</div>
+        </div>
+        <div class="col-td width20">
+          <div class="spacing">
+            <a href="javascript:;" class="icon-tool btn-edit"
+              (click)="editGroupItem(i)">
+            </a>
+            <a href="javascript:;" class="icon-tool btn-trash"
+              (click)="deleteGroupItem(i)">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end .table-data-->
+  </div>
+  <!--end .info-row-->
+  <div class="info-row">
+    <div class="info-title">
+      ENDPOINTS
+    </div>
+    <div class="grey-txt">
+      Add and define your API endpoints.
+    </div>
+    <a href="javascript:;" class="blue-links add-link"
+      (click)="clickAddEndpoint()">
+      Create Endpoint
+    </a>
+    <div class="table-data endpoint-table"
+      [class.default-table]="dataList['endpointsList'].length === 0">
+      <div class="row-th">
+        <div class="col-th width10"
+          *ngIf="dataList['endpointsList'].length !== 0">
+          <div class="spacing no-uppercase">No</div>
+        </div>
+        <div class="col-th width32">
+          <div class="spacing">Endpoint</div>
+        </div>
+        <div class="col-th width12">
+          <div class="spacing">Group</div>
+        </div>
+        <div class="col-th width10">
+          <div class="spacing">Method</div>
+        </div>
+        <div class="col-th ">
+          <div class="spacing">Description</div>
+        </div>
+        <div class="col-th width80"
+          *ngIf="dataList['endpointsList'].length !== 0">
+          <div class="spacing">
+            <a href="javascript:;" class="icon-tool btn-edit"></a>
+             <a href="javascript:;" class="icon-tool btn-trash"></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tbody">
+        <div class="no-data">
+          You don't have any endpoint yet.
+        </div>
+      </div>
+      
+      <div class="row-td"
+        *ngFor="let item of dataList['endpointsList'];let i = index">
+        <div class="col-td width10">
+          <div class="spacing">#{{i + 1}}</div>
+        </div>
+        <div class="col-td width32">
+           <div class="spacing">{{item['endpoint']}}</div>
+         </div>
+        <div class="col-td width12">
+          <div class="spacing">{{item['group']}}</div>
+        </div>
+        <div class="col-td width10">
+          <div class="spacing">{{item['method']}}</div>
+        </div>
+        <div class="col-td ">
+          <div class="spacing">{{item['description']}}</div>
+        </div>
+        <div class="col-td width80">
+          <div class="spacing">
+            <a href="javascript:;" class="icon-tool btn-edit"
+              (click)="editEndpointItem(i)">
+            </a>
+            <a href="javascript:;" class="icon-tool btn-trash"
+              (click)="deleteEndpointItem(i)">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--end .row-td-->
+    </div>
+    <!--end .table-data-->
+  </div>
+  <!--end .info-row-->
+</div>
+<!--end .tab-contents-->
+
+<div class="bottom-btn"
+  *ngIf="pageType === 'add'">
+  <a href="javascript:;" class="btn btn-blue-border"
+    (click)="previous()">
+    PREVIOUS
+  </a>
+  <a href="javascript:;" class="btn btn-blue"
+    (click)="next()">
+    NEXT
+  </a>
+</div>
+<!--end .bottom-btn-->
+
+<app-sd-modal-windows
+  *ngIf="modalData['name'] !== ''"
+  [dataListDropdown]="dataListDropdown"
+  [modalData]="modalData"
+  (saveGroup)="saveGroup($event)"
+  (saveEndpoint)="saveEndpoint($event)">
+</app-sd-modal-windows>

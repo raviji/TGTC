@@ -1,0 +1,114 @@
+@import '../../../../../styles/variables';
+
+//.form-box
+.form-box {
+    padding: 32px 0 20px 0;
+    .form-title {
+        color: $blueTextColor;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 0.26px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+    .input-control {
+        margin-bottom: 18px;
+        &.mright-22 {
+            margin-right: 22px;
+        }
+        label {
+            display: block;
+            color: $black;
+            font-size: 16px;
+            letter-spacing: 0.18px;
+            margin-bottom: 13px;
+            .color-red {
+                color: $redColor;
+            }
+        }
+        .w-559 {
+            width: 559px;
+        }
+    }
+    .row-file {
+        display: flex;
+        -webkit-display: flex;
+        margin-bottom: 45px;
+        .file-img {
+            width: 93px;
+            height: 93px;
+            border-radius: 2px;
+            border: 1px dashed $blueBg;
+            background: url("/assets/i/icon-upload.svg") center center no-repeat;
+            background-size: 22px 16px;
+            position: relative;
+            &.no-default {
+                border: none;
+                background: none;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+            }
+            input {
+                opacity: 0;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                position: absolute;
+            }
+            .blue-links {
+                color: $blueTextColor;
+                font-size: 16px;
+                line-height: 35px;
+            }
+        }
+        .file-txt {
+            margin-left: 30px;
+        }
+        .name {
+            font-size: 23px;
+            margin-bottom: 10px;
+            color: $black;
+            line-height: 20px;
+        }
+        .txt {
+            font-size: 16px;
+            color: $black;
+            em {
+                display: block;
+                font-style: normal;
+            }
+        }
+    }
+    .btn-submit {
+        margin-top: 40px;
+        margin-bottom: 14px;
+        display: block;
+        text-align: center;
+        line-height: 51px;
+        width: 559px;
+        height: 51px;
+        border-radius: 5px;
+        background-color: $blueBg;
+        color: $white;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-family: "ProximaNovaRegular";
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+    // .bottom-tips
+    .bottom-tips {
+        color: $grey;
+        font-size: 16px;
+        font-weight: 400;
+        background: url("/assets/i/icon-tips-blue.svg") left center no-repeat;
+        background-size: 20px;
+        padding-left: 36px;
+    }
+}

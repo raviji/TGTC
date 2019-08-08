@@ -1,0 +1,25 @@
+@import '../../../../styles/variables';
+
+//.bottom
+.bottom {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: $greyBg;
+    width: calc(100% - 256px);
+    left: 256px;
+    z-index: 3999;
+    div {
+        display: inline-block;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 14px;
+        letter-spacing: -0.29px;
+        a {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 14px;
+            letter-spacing: -0.29px;
+        }
+    }
+}

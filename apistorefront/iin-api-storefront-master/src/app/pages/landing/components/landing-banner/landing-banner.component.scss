@@ -1,0 +1,116 @@
+@import '../../../../../styles/variables';
+
+//.wide-content
+.wide-content {
+  padding: 104px 0 70px 0;
+  display: flex;
+  -webkit-display: flex;
+  overflow-x: hidden;
+  .w-770 {
+    width: 770px;
+  }
+  .mleft-50 {
+    margin-left: 50px;
+    overflow-x: auto;
+  }
+  .title {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 700;
+    margin-left: 104px;
+    width: 666px;
+    margin-bottom: 36px;
+  }
+  .sm-tit {
+    display: flex;
+    -webkit-display: flex;
+    margin-left: 27px;
+    margin-bottom: 22px;
+    .line {
+      height: 1px;
+      background: #ffffff;
+      border-radius: 2px;
+      margin-top: 14px;
+      &.w-66 {
+        width: 66px;
+      }
+      &.w-151 {
+        width: 151px;
+      }
+    }
+    .radius {
+      width: 14px;
+      height: 14px;
+      border: 2px solid #ffffff;
+      border-radius: 14px;
+      margin-top: 8px;
+    }
+    em {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 0 16px 0 12px;
+    }
+  }
+  .list {
+    margin-left: 104px;
+    margin-bottom: 50px;
+    li {
+      margin-bottom: 20px;
+      color: #ffffff;
+      font-family: "ProximaNovaRegular";
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+  .bottom-btn {
+    margin-left: 104px;
+    .btn {
+      padding: 0;
+      width: 174px;
+      height: 60px;
+      border-radius: 3px;
+      border: 1px solid #024d83;
+      background-color: #ffffff;
+      color: #003552;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 60px;
+      span {
+        background: url(/assets/i/arrow-right-black.svg) right center no-repeat;
+        background-size: 19px 12px;
+        padding-right: 27px;
+      }
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+  .scroll-box {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    ngb-carousel {
+      outline: none;
+    }
+  }
+  .bottom-txt {
+    .btn-all {
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: 700;
+      display: block;
+      background: url(/assets/i/arrow-right-circle-white.svg) right center no-repeat;
+      background-size: 20px;
+      padding-right: 65px;
+      width: 300px;
+      span {
+        display: block;
+        font-size: 18px;
+      }
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+    
+  }
+}

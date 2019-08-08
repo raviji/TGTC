@@ -1,0 +1,586 @@
+<h2 class="title">Build For Developers</h2>
+<div class="txt-p mb-67">
+  <p>
+    Easy to build and integrate with following programming language, if you want any specific language please let us know 
+    through API Survey by registering your self here 
+  </p>
+</div>
+<div class="flex-box m-30">
+  <div class="tab">
+    <ul class="tab-item">
+      <li>
+        <a href="javascript:;"
+          [class.active]="currentProgress === 'Create User Authentication'"
+          (click)="currentProgress = 'Create User Authentication'">
+          <i class="icon icon-user"></i>
+          Create User Authentication
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;"
+          [class.active]="currentProgress === 'Customer Transaction'"
+          (click)="currentProgress = 'Customer Transaction'">
+          <i class="icon icon-customer"></i>
+          Customer Transaction
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;"
+          [class.active]="currentProgress === 'Email Marketing Blast'"
+          (click)="currentProgress = 'Email Marketing Blast'">
+          <i class="icon icon-card"></i>
+          Email Marketing Blast
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;"
+          [class.active]="currentProgress === 'Pay a Bill'"
+          (click)="currentProgress = 'Pay a Bill'">
+          <i class="icon icon-bill"></i>
+          Pay a Bill
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;"
+          [class.active]="currentProgress === 'Misscall OTP'"
+          (click)="currentProgress = 'Misscall OTP'">
+          <i class="icon icon-tel"></i>
+          Misscall OTP
+        </a>
+      </li>
+    </ul>
+    <div class="bottom-link">
+      <a href="javascript:;">See All Docs</a>
+    </div>
+  </div>
+  <div class="code"
+    *ngIf="currentProgress === 'Create User Authentication'">
+    <div class="code-tabs">
+      <ul>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Swift'"
+            (click)="currentTab = 'Swift'">
+            Swift
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Objective-C'"
+            (click)="currentTab = 'Objective-C'">
+            Objective-C
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Java'"
+            (click)="currentTab = 'Java'">
+            Java
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'C++'"
+            (click)="currentTab = 'C++'">
+            C++
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Unity'"
+            (click)="currentTab = 'Unity'">
+            Unity
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--end .code-tabs-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Swift'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Objective-C'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Java'">
+      <pre>
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'C++'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Unity'">
+      <pre>
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+  </div>
+  <div class="code"
+    *ngIf="currentProgress === 'Customer Transaction'">
+    <div class="code-tabs">
+      <ul>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Swift'"
+            (click)="currentTab = 'Swift'">
+            Swift
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Objective-C'"
+            (click)="currentTab = 'Objective-C'">
+            Objective-C
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Java'"
+            (click)="currentTab = 'Java'">
+            Java
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'C++'"
+            (click)="currentTab = 'C++'">
+            C++
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Unity'"
+            (click)="currentTab = 'Unity'">
+            Unity
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--end .code-tabs-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Swift'">
+      <pre>
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Objective-C'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Java'">
+      <pre>
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'C++'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Unity'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+  </div>
+  <div class="code"
+    *ngIf="currentProgress === 'Email Marketing Blast'">
+    <div class="code-tabs">
+      <ul>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Swift'"
+            (click)="currentTab = 'Swift'">
+            Swift
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Objective-C'"
+            (click)="currentTab = 'Objective-C'">
+            Objective-C
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Java'"
+            (click)="currentTab = 'Java'">
+            Java
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'C++'"
+            (click)="currentTab = 'C++'">
+            C++
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Unity'"
+            (click)="currentTab = 'Unity'">
+            Unity
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--end .code-tabs-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Swift'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Objective-C'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Java'">
+      <pre>
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'C++'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Unity'">
+      <pre>
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+  </div>
+  <div class="code"
+    *ngIf="currentProgress === 'Pay a Bill'">
+    <div class="code-tabs">
+      <ul>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Swift'"
+            (click)="currentTab = 'Swift'">
+            Swift
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Objective-C'"
+            (click)="currentTab = 'Objective-C'">
+            Objective-C
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Java'"
+            (click)="currentTab = 'Java'">
+            Java
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'C++'"
+            (click)="currentTab = 'C++'">
+            C++
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Unity'"
+            (click)="currentTab = 'Unity'">
+            Unity
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--end .code-tabs-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Swift'">
+      <pre>
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Objective-C'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Java'">
+      <pre>
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'C++'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Unity'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+  </div>
+  <div class="code"
+    *ngIf="currentProgress === 'Misscall OTP'">
+    <div class="code-tabs">
+      <ul>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Swift'"
+            (click)="currentTab = 'Swift'">
+            Swift
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Objective-C'"
+            (click)="currentTab = 'Objective-C'">
+            Objective-C
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Java'"
+            (click)="currentTab = 'Java'">
+            Java
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'C++'"
+            (click)="currentTab = 'C++'">
+            C++
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-items"
+            [class.current]="currentTab === 'Unity'"
+            (click)="currentTab = 'Unity'">
+            Unity
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--end .code-tabs-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Swift'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Objective-C'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Java'">
+      <pre>
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'C++'">
+      <pre>
+Auth.auth( ).addStateDidChangeListener {{ '{' }} (auth, user) in
+  if let user = user {{ '{' }}
+    let email = user.email
+    // ...
+  {{ '}' }}
+{{ '}' }}
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+    <div class="code-content"
+      *ngIf="currentTab === 'Unity'">
+      <pre>
+Auth.auth( ).signIn(withEmail: userEmail, password: password) {{ '{' }} (user, error) in
+  if let user = user {{ '{' }}
+    // ...
+  {{ '}' }}
+{{ '}' }}
+      </pre>
+    </div>
+    <!--end .tab-content-->
+  </div>
+</div>

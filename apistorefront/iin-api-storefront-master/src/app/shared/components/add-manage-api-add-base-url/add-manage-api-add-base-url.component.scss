@@ -1,0 +1,9 @@
+@import '../../../../styles/variables';
+
+//.tab-contents
+.tab-contents {
+    padding: 30px 60px;
+    &.add {
+        padding: 12px 0;
+    }
+}

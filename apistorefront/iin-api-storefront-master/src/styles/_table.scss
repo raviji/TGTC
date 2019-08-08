@@ -1,0 +1,122 @@
+/* table */
+.table-data  {
+    margin-top: 25px;
+    .row-td,
+    .row-th {
+        display: table;
+        width: 100%;
+    }
+    .row-th {
+        background: #dcdcdc;
+    }
+    .col-th,
+    .col-td {
+        vertical-align: middle;
+        display: table-cell;
+    }
+    .col-th {
+        font-size: 14px;
+        color: #565656;
+        line-height: 18px;
+        height: 48px;
+    }
+    .row-td {
+        font-size: 14px;
+        color: #565656;
+        background: #fff;
+        line-height: 18px;
+        height: 48px;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    .spacing {
+        display: block;
+        padding: 0 10px;
+        position: relative;
+    }
+    // .icon-tool
+    .icon-tool {
+        display: inline-block;
+        vertical-align: middle;
+        width: 18px;
+        height: 18px;
+        margin: 0 5px;
+        &.btn-edit {
+            background: url(/assets/i/edit.svg) center center no-repeat;
+        }
+        &.btn-trash {
+            background: url(/assets/i/trash-black.png) center center no-repeat;
+        }
+        &.btn-more {
+            background: url(/assets/i/more-vertical.svg) center center no-repeat;
+            background-size: 4px 16px;
+        }
+    }
+    &.little-short {
+        border-top: 1px solid #dcdcdc;
+        width: 398px;
+        margin-top: 32px;
+    }
+    &.endpoint-table {
+        &.default-table {
+            .row-th {
+                .col-th {
+                    color: #171717;
+                    font-weight: 700;
+                    .spacing {
+                        text-transform: initial;
+                    }
+                }
+            }
+            .tbody {
+                display: block;
+            }
+        }
+        .row-th {
+            .col-th {
+                color: #565656;
+                .spacing {
+                    text-transform: uppercase;
+                    &.no-uppercase {
+                        text-transform: initial;
+                    }
+                }
+            }
+        }
+        .tbody {
+            display: none;
+            .no-data {
+                border-bottom: 0;
+                background-color: #fff;
+                padding-left: 10px;
+                color: #171717;
+                font-size: 14px;
+                letter-spacing: 0.16px;
+                line-height: 48px;
+            }
+        }
+    }
+    .width5 {
+        width: 5%;
+    }
+    .width50 {
+        width: 50px;
+    }
+    .width80 {
+        width: 80px;
+    }
+    .width10 {
+        width: 10%;
+    }
+    .width12 {
+        width: 12%;
+    }
+    .width16 {
+        width: 16.6%;
+    }
+    .width20 {
+        width: 20%;
+    }
+    .width32 {
+        width: 32%;
+    }
+}

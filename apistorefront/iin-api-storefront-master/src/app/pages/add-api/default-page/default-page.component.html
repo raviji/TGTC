@@ -1,0 +1,120 @@
+<app-sd-left-sidebar></app-sd-left-sidebar>
+<div class="right-content">
+  <app-sd-header-login></app-sd-header-login>
+  
+  <div class="wrapper-main">
+    <div class="top-back">
+      <a [routerLink]="['/dashboard']" class="btn-back">Back To Dashboard</a>
+    </div>
+    
+    <app-sd-add-new-api-form
+      (clickAddAPI)="clickAddAPI($event)"
+      [addAPIFormData]="addAPIFormData"
+      [dataListDropdown]="dataListDropdown"
+      [class.hide]="currentStepIndex !== 0">
+    </app-sd-add-new-api-form>
+    
+    <div class="top-label"
+      *ngIf="currentStepIndex !== 0 && currentStepIndex !== 5">
+      GET YOUR API READY TO PUBLISHED
+    </div>
+    <div class="top-label"
+      *ngIf="currentStepIndex === 5">
+      YOUR API HAS BEEN PUBLISHED
+    </div>
+    
+    <div class="step-bar flex-grid"
+      *ngIf="currentStepIndex !== 0">
+      <div class="line"></div>
+      <div class="items"
+        [class.current]="currentStepIndex > 1">
+        <div class="points">1</div>
+        <div class="txt">
+          Add an Image
+        </div>
+      </div>
+      <!--end .items-->
+      <div class="items"
+        [class.current]="currentStepIndex > 2">
+        <div class="points">2</div>
+        <div class="txt">
+          Add a base URL
+        </div>
+      </div>
+      <!--end .items-->
+      <div class="items"
+        [class.current]="currentStepIndex > 3">
+        <div class="points">3</div>
+        <div class="txt">
+          Add some endpoints
+        </div>
+      </div>
+      <!--end .items-->
+      <div class="items"
+        [class.current]="currentStepIndex > 4">
+        <div class="points">4</div>
+        <div class="txt">
+          Make your API public
+        </div>
+      </div>
+      <!--end .items-->
+    </div>
+    <!--end .step-bar-->
+    
+    <app-sd-add-manage-api-add-image
+      (clickNext)="clickNext($event)"
+      (clickPrevious)="clickPrevious($event)"
+      [addAPIFormData]="addAPIFormData"
+      [dataListDropdown]="dataListDropdown"
+      [dataList]="addAPIFormData"
+      [pageType]="'add'"
+      *ngIf="addedAPI"
+      [class.hide]="currentStepIndex !== 1">
+    </app-sd-add-manage-api-add-image>
+    
+    <app-sd-add-manage-api-add-base-url
+      (clickNext)="clickNext($event)"
+      (clickPrevious)="clickPrevious($event)"
+      (clickDeleteAPI)="clickDeleteAPI($event)"
+      [dataListDropdown]="dataListDropdown"
+      [pageType]="'add'"
+      [class.hide]="currentStepIndex !== 2">
+    </app-sd-add-manage-api-add-base-url>
+    
+    <app-sd-add-manage-api-add-endpoints
+      (clickNext)="clickNext($event)"
+      (clickPrevious)="clickPrevious($event)"
+      [dataListDropdown]="dataListDropdown"
+      [pageType]="'add'"
+      [class.hide]="currentStepIndex !== 3">
+    </app-sd-add-manage-api-add-endpoints>
+
+    <app-sd-add-api-make-public
+      (clickNext)="clickNext($event)"
+      (clickPrevious)="clickPrevious($event)"
+      [class.hide]="currentStepIndex !== 4">
+    </app-sd-add-api-make-public>
+    
+    <div class="tab-contents make-your-api"
+      [class.hide]="currentStepIndex !== 5">
+      <div class="info-row">
+        <div class="info-title">
+          Congratulations
+        </div>
+        <div class="grey-txt">
+          congratulations your API has been published, you can make settings on the MyAPI menu
+        </div>  
+        <a href="javascript:;" class="blue-links right-arrow"
+          (click)="showMyAPI()">
+          Show MyAPI
+        </a>
+      </div>
+      <!--end .info-row-->
+    </div>
+    <!--end .tab-contents-->
+    
+    <app-sd-footer-login></app-sd-footer-login>
+  </div>
+  <!--end .wrapper-->
+</div>
+<!--end .right-content-->

@@ -1,0 +1,13 @@
+@import '../../../../styles/variables';
+
+.right-content {
+  margin-left: 282px;
+  padding-right: 87px;
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .right-content {
+    margin-left: 150px;
+    padding-right: 30px;
+  }
+}

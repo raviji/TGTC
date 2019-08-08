@@ -1,0 +1,19 @@
+@import '../../../../../styles/variables';
+
+.bottom-btn {
+    text-align: center;
+    &.mb-126 {
+        margin-bottom: 126px;
+    }
+    a {
+        display: inline-block;
+        background: url("/assets/i/icon-arrow-r-blue.svg") right center no-repeat;
+        background-size: 16px;
+        padding-right: 30px;
+        color: $darkBlue;
+        font-size: 16px;
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+}

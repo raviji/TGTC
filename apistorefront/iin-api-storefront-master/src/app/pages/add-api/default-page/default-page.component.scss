@@ -1,0 +1,84 @@
+@import '../../../../styles/variables';
+
+// .wrapper-main
+.wrapper-main {
+    padding: 32px 60px;
+    .top-label {
+        color: #000;
+        font-size: 23px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+//.step-bar
+.step-bar {
+    position: relative;
+    padding: 20px 0;
+    .line {
+        position: absolute;
+        left: 0;
+        top: 33px;
+        height: 1px;
+        background-color: #c6c6c6;
+        width: 100%;
+    }    
+    .items {
+        text-align: center;
+        background-color: $greyBg;
+        position: relative;
+        z-index: 2;
+        .points {
+            width: 25px;
+            height: 25px;
+            background-color: #c6c6c6;
+            text-align: center;
+            color: $white;
+            border-radius: 100%;
+            display: inline-block;
+            font-family: "ProximaNovaRegular";
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.02px;
+            line-height: 25px;
+        }
+        .txt {
+            margin-top: 10px;
+            color: #717171;
+            font-size: 14px;
+            letter-spacing: 0.02px;
+            line-height: 21px;
+        }
+        &.current {
+            .points {
+                background-color: $darkBlue;
+            }
+            .txt {
+                color: #001423;
+            }
+        }
+    }
+}
+
+::ng-deep {
+    .bottom-btn {
+        padding: 0;
+        .btn {
+            margin-right: 28px;
+        }    
+    }
+}
+.top-back {
+    margin-bottom: 30px;
+    .btn-back {
+        color: $darkBlue;
+        font-size: 16px;
+        background: url("/assets/i/icon-arrow-left-blue.svg") left 6px no-repeat;
+        background-size: 6px 12px;
+        padding-left: 33px;
+        padding-top: 2px;
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+}

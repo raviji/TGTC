@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="13px" viewBox="0 0 15 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 55.1 (78136) - https://sketchapp.com -->
+    <title>F4D8DC65-7993-41B2-9D28-2C3E21E90F53</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M8.55,11.5 L6.65710678,9.60710678 C6.26658249,9.21658249 5.63341751,9.21658249 5.24289322,9.60710678 L4.70710678,10.1428932 C4.31658249,10.5334175 4.31658249,11.1665825 4.70710678,11.5571068 L8.55,15.4 L16.2928932,7.65710678 C16.6834175,7.26658249 16.6834175,6.63341751 16.2928932,6.24289322 L15.7571068,5.70710678 C15.3665825,5.31658249 14.7334175,5.31658249 14.3428932,5.70710678 L8.55,11.5 Z" id="path-1"></path>
+        <filter x="-12.2%" y="-5.6%" width="124.4%" height="134.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Case-Studies" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Case-Studies---Type-Selected" transform="translate(-1094.000000, -898.000000)" fill-rule="nonzero">
+            <g id="user-menu" transform="translate(1071.000000, 823.000000)">
+                <g id="UI-Kit/Selects/Checkbox-MD/selected" transform="translate(20.000000, 70.000000)">
+                    <g id="Shape">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,40 @@
+<app-sd-left-sidebar
+  [pageType]="'support-page'">
+</app-sd-left-sidebar>
+<div class="right-content">
+  <app-sd-header-login></app-sd-header-login>
+  
+  <app-sd-manage-api-banner
+    [currentTab]="currentTab"
+    (changeTab)="changeTab($event)"
+    [bannerType]="'support-page'">
+  </app-sd-manage-api-banner>
+
+  <app-sd-manage-api-support
+    *ngIf="currentTab === 'Inbox' && dataList"
+    [dataList]="dataList['Inbox']">
+  </app-sd-manage-api-support>
+  
+  <app-sd-manage-api-support
+    *ngIf="currentTab === 'Unread' && dataList"
+    [dataList]="dataList['Unread']">
+  </app-sd-manage-api-support>
+  
+  <app-sd-manage-api-support
+    *ngIf="currentTab === 'Starred' && dataList"
+    [dataList]="dataList['Starred']">
+  </app-sd-manage-api-support>
+  
+  <app-sd-manage-api-support
+    *ngIf="currentTab === 'Sent' && dataList"
+    [dataList]="dataList['Sent']">
+  </app-sd-manage-api-support>
+  
+  <app-sd-manage-api-support
+    *ngIf="currentTab === 'Archived' && dataList"
+    [dataList]="dataList['Archived']">
+  </app-sd-manage-api-support>
+  
+  <app-sd-footer-login></app-sd-footer-login>
+</div>
+<!--end .right-content-->

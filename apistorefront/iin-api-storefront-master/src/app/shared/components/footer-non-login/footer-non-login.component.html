@@ -1,0 +1,129 @@
+<footer class="footer">
+  <div class="max-1156">
+    <div class="footer-navs">
+      <div class="left-logo">
+        <span class="logo-blue">
+          IINAPI
+        </span>
+      </div>
+      <div class="right-tree">
+        <div class="items">
+          <h4 class="title">Company</h4>
+          <ol>
+            <li>
+              <a href="javascript:;" class="links">About Us</a>
+            </li>
+            <li>
+              <a href="javascript:;" class="links">Careers</a>
+            </li>
+            <li>
+              <a href="javascript:;" class="links">Blog</a>
+            </li>
+            <li>
+              <a href="javascript:;" class="links">Press</a>
+            </li>
+            <li>
+              <a href="javascript:;" class="links">Brand Guidelines</a>
+            </li>
+          </ol>
+        </div>
+        <!--end .items-->
+        <div class="items">
+          <h4 class="title">Learn</h4>
+          <ol>
+            <li>
+              <a href="javascript:;" class="links">Guides</a>
+            </li>
+            <li>
+              <a href="javascript:;" class="links">References</a>
+            </li>
+            <li>
+              <a href="javascript:;" class="links">Samples</a>
+            </li>
+            <li>
+              <a href="javascript:;" class="links">Libraries</a>
+            </li>
+            <li>
+              <a href="javascript:;" class="links">Github</a>
+            </li>
+          </ol>
+        </div>
+        <!--end .items-->
+        <div class="items">
+          <h4 class="title">Support</h4>
+          <ol>
+            <li>
+              <a href="javascript:;" class="links">Contact Support</a>
+            </li>
+            <li>
+              <a href="javascript:;" class="links">Stack Overflow</a>
+            </li>
+            <li>
+              <a href="javascript:;" class="links">Release Notes </a>
+            </li>
+            <li>
+              <a href="javascript:;" class="links">FAQs</a>
+            </li>
+            <li>
+              <a href="javascript:;" class="links">Legacy Documentation</a>
+            </li>
+          </ol>
+        </div>
+        <!--end .items-->
+      </div>
+    </div>
+    <!--end .footer-navs-->
+  </div>
+  
+  <div class="blue-bar">
+    <div class="max-1156">
+      <div class="lefts">
+        <ul>
+          <li>
+            <a href="javascript:;" class="links">Status</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="links">Privacy & Terms</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="links">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <!--end .lefts-->
+      <div class="rights">
+        <div class="drop-lang"
+          (clickOutside)="openCountryDropdown = false;"
+          [class.open]="openCountryDropdown">
+          <a href="javascript:;" class="links"
+            (click)="openCountryDropdown = true;">
+            <i class="icon-country icon-us"></i>
+            <span class="lang">{{countryValue}}</span>
+            <i class="icon-drop"></i>
+          </a>
+          <div class="drop-menu">
+            <ul>
+              <li
+                *ngFor="let item of countryDropdown">
+                <a href="javascript:;" class="drop-item"
+                  (click)="countryValue = item['option'];openCountryDropdown = false;">
+                  {{item['option']}}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="logos">
+          <ul>
+            <li><a href="javascript:;" class="icon icon-facebook"></a></li>
+            <li><a href="javascript:;" class="icon icon-camera"></a></li>
+            <li><a href="javascript:;" class="icon icon-twitter"></a></li>
+            <li><a href="javascript:;" class="icon icon-in"></a></li>
+          </ul>
+        </div>
+      </div>
+      <!--end .rights-->
+    </div>
+  </div>
+</footer>
+<!-- end footer -->

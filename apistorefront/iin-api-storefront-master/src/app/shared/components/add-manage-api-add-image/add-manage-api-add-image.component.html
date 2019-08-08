@@ -1,0 +1,122 @@
+<div class="tab-contents"
+  [class.add]="pageType === 'add'">
+  <form [formGroup]="formGroup" class="form-box">           
+    <div class="title-uppercase">DESCRIBE YOUR API</div>
+    <div class="row-file">
+      <div class="file-img"
+        [class.no-default]="dataList['imgUrl'] !== ''">
+        <img src="{{dataList['imgUrl']}}" alt="img"
+          *ngIf="dataList['imgUrl'] !== ''">
+        <input type="file" accept=".png,.jpg,.jpeg"
+      (change)="selectFile($event);">
+      </div>
+      <div class="file-txt">
+        <div class="name">
+          {{pageType === 'add' ? 'Upload Image' : 'API Image'}}
+        </div>
+        <p class="txt">Recommended Image Size :</p>
+        <p class="txt">500 X 500 Px JPEG/PNG
+          <em>Formats</em>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="input-control mright-22">
+          <label>API Name <em class="color-red">*</em></label>
+          <div class="inputs"
+            [ngClass]="{'error': submitted && f.apiName.errors}">
+            <input type="text" placeholder="Your API's Name"
+              formControlName="apiName"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="input-control mright-22">
+          <label>Website</label>
+          <div class="inputs"
+            [ngClass]="{'error': submitted && (f.website.errors || (f.website.value !== '' && !validationService.checkURL(f.website.value)))}">
+            <input type="text" placeholder="URL"
+              formControlName="website"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="input-control mright-22">
+          <label>Short Description <em class="color-red">*</em></label>
+          <div class="inputs"
+            [ngClass]="{'error': submitted && f.shortDescription.errors}">
+            <input type="text" placeholder="Describe Your API"
+              formControlName="shortDescription"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="input-control mright-22">
+          <label>Categories <em class="color-red">*</em></label>
+          <div ngbDropdown class="d-inline-block"
+            *ngIf="dataListDropdown"
+            [ngClass]="{ 'error': submitted && (dataList['categories'] === '')}"
+            [class.default-text]="dataList['categories'] === ''">
+            <button class="btn btn-outline-primary" ngbDropdownToggle>
+              {{dataList['categories'] !== '' ? dataList['categories'] : 'Categories'}}
+            </button>
+            <div ngbDropdownMenu>
+              <button ngbDropdownItem class="dropdown-item"
+                *ngFor="let optionItem of dataListDropdown['categoriesDropdown']"
+                (click)="dataList['categories'] = optionItem['option']">
+                {{optionItem['option']}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="input-control mright-22">
+          <label>Long Description</label>
+          <div class="textareas"
+            [ngClass]="{'error': submitted && f.longDescription.errors}">
+            <textarea placeholder="Describe Your API"
+              formControlName="longDescription">
+            </textarea>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="input-control mright-22">
+          <label>Term of Use</label>
+          <div class="textareas"
+            [ngClass]="{'error': submitted && f.termOfUse.errors}">
+            <textarea placeholder="Describe Your API"
+              formControlName="termOfUse">
+            </textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <!-- end .form-box -->
+  
+  <div class="bottom-btn"
+    *ngIf="pageType === 'manage'">
+    <a href="javascript:;" class="btn btn-blue"
+      (click)="update()">
+      UPDATE
+    </a>
+  </div>
+  <!--end .bottom-btn-->
+</div>
+<!--end .tab-contents-->
+
+<div class="bottom-btn"
+  *ngIf="pageType === 'add'">
+  <a href="javascript:;" class="btn btn-blue-border"
+    (click)="previous()">
+    PREVIOUS
+  </a>
+  <a href="javascript:;" class="btn btn-blue"
+    (click)="next()">
+    NEXT
+  </a>
+</div>
+<!--end .bottom-btn-->

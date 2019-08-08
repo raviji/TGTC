@@ -1,0 +1,138 @@
+@import '../../../../styles/variables';
+
+//.left-aside
+.left-aside {
+    width: 256px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 3px 1px rgba(0, 0, 0, 0.14);
+    background-color: $white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: calc(100%);
+    overflow-y: auto;
+    z-index: 888;
+    .logo-area {
+        margin-bottom: 40px;
+        padding: 17px 0 0 24px;
+        .logo-btn {
+            padding-left: 60px;
+            background: url(/assets/i/icon-logo.svg) left center no-repeat;
+            line-height: 41px;
+            height: 41px;
+            display: block;
+            color: $darkBlue;
+            font-size: 23px;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-size: 40px auto;
+        }
+    }
+    // .info-items
+    .info-items {
+       padding: 0 0 65px; 
+        .grey-title {
+            line-height: 46px;
+            opacity: 0.3;
+            color: $black;
+            font-size: 12px;
+            padding: 0 28px;
+        }
+        .menu-list {
+            .link-item {
+                margin-bottom: 18px;
+                padding-left: 33px;
+                line-height: 45px;
+                display: block;
+                color: rgba(0,0,0,0.5);
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 36px;
+                height: 36px;
+                text-transform: uppercase;
+                padding: 2px 28px 0 61px;
+                background-position: 28px center;
+                background-repeat: no-repeat;
+                &.current {
+                    height: 36px;
+                    background-color: rgba(216,216,216,0.3);
+                    color: $darkBlue;
+                }
+                &.icon-dashboard {
+                    background-image: url(/assets/i/icon-dashboard.svg);
+                    background-size: 18px auto;
+                    &.current {
+                        background-image: url(/assets/i/icon-dashboard-active.svg);
+                        background-size: 18px auto;
+                    }
+                }
+                &.icon-payment {
+                    background-image: url(/assets/i/credit-card.svg);
+                    background-size: 22px auto;
+                }
+                &.icon-profile {
+                    background-image: url(/assets/i/user.svg);
+                    background-size: 16px auto;
+                }
+                &.icon-system {
+                    background-image: url(/assets/i/airplay.svg);
+                    background-size: 20px auto;
+                }
+            }
+        }
+    }
+    .drop-area {
+        padding: 0 14px 0 28px;
+        .drop-title {
+            .left-txt {
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 36px;
+                text-transform: uppercase;
+                color: rgba(0,0,0,0.5);
+            }
+            .btn-arrow {
+                background: url(/assets/i/icon-arrow-top.svg) center center no-repeat;
+                background-size: 12px auto;
+                display: inline-block;
+                width: 20px;
+                height: 15px;
+                transform: rotateX(180deg);
+            }
+        }
+        &.open {
+            .drop-title {
+                .btn-arrow {
+                    transform: rotateX(0);
+                }
+            }
+            .drop-list {
+                padding-left: 45px;
+                display: block;
+                padding-left: 45px;
+                .link-item {
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 36px;
+                    text-transform: uppercase;
+                    color: rgba(0,0,0,0.5);
+                    &.active {
+                        color: rgba(0,105,163,0.5);
+                    }
+                }
+            }
+        }
+        .drop-list {
+            display: none;
+        }
+    }
+    .add-api {
+        opacity: 0.5;
+        color: $darkBlue;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 36px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-left: 28px;
+    }
+}

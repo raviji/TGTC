@@ -1,0 +1,19 @@
+<app-sd-left-sidebar
+  [pageType]="'analytics-page'">
+</app-sd-left-sidebar>
+<div class="right-content">
+  <app-sd-header-login></app-sd-header-login>
+  
+  <app-sd-manage-api-banner
+    [bannerType]="'analytics-page'">
+  </app-sd-manage-api-banner>
+  
+  <app-sd-manage-api-analytics
+    *ngIf="dataListInitial"
+    [dataListInitial]="dataListInitial"
+    [dataListAnotherVersion]="dataListAnotherVersion">
+  </app-sd-manage-api-analytics>
+
+  <app-sd-footer-login></app-sd-footer-login>
+</div>
+<!--end .right-content-->

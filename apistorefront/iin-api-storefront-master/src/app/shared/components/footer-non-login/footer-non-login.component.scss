@@ -1,0 +1,171 @@
+@import '../../../../styles/variables';
+
+//.footer
+.footer {
+    .footer-navs {
+        display: flex;
+        padding-top: 119px;
+        padding-bottom: 127px;
+        .left-logo {
+            flex: 0 0 25%;
+            .logo-blue {
+                background: url(/assets/i/logo-blue.svg) left center no-repeat;
+                background-size: 45px 47px;
+                line-height: 56px;
+                display: block;
+                color: #003552;
+                font-family: Poppins;
+                font-size: 36px;
+                font-weight: 700;
+                text-transform: uppercase;
+                padding-left: 65px;
+            }
+        }
+        .right-tree {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            .title {
+                line-height: 25px;
+                color: #2c2e30;
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+            .links {
+                color: #54565a;
+                font-size: 16px;
+                line-height: 39px;
+                margin-bottom: 10px;
+                
+            }
+        }
+    }
+    .blue-bar {
+        background-color: #f6f8f9;
+        .max-1156 {
+            height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .lefts {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-right: 38px;
+                }
+            }
+            .links {
+                line-height: 20px;
+                color: #54565a;
+                font-size: 14px;
+            }
+        }
+        .rights {
+            display: flex;
+        }
+        .drop-lang {
+            margin-right: 60px;
+            padding: 0;
+            position: relative;
+            .links {
+                display: inline-block;
+                line-height: 26px;
+                padding-right: 30px;
+                position: relative;
+                min-width: 60px;
+                .icon-country {
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    &.icon-us {
+                        background: url(/assets/i/united-states.svg) left center no-repeat;
+                        background-size: 100%;
+                        margin-right: 10px;
+                    }
+                }
+                .lang {
+                    line-height: 20px;
+                    color: #54565a;
+                    font-size: 14px;
+                }
+                .icon-drop {
+                    background: url(/assets/i/icon-drop.svg) center center no-repeat;
+                    background-size: 8px auto;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    right: 0;
+                    top: 4px;
+                }
+            }
+            &.open {
+                .drop-menu {
+                    display: block;
+                }
+            }
+            .drop-menu {
+                display: none;
+                background-color: #fff;
+                border: solid 1px #dbdded;
+                margin-top: -1px;
+                width: 200px;
+                min-width: 200px;
+                padding-top: 0;
+                padding-bottom: 0;
+                overflow: hidden;
+                position: absolute;
+                z-index: 1000;
+                bottom: 100%;
+                left: 0;
+                ul {
+                    li {
+                        .drop-item {
+                            display: block;
+                            display: block;
+                            width: 100%;
+                            padding: 0.25rem 1.5rem;
+                            clear: both;
+                            font-weight: 400;
+                            font-size: 16px;
+                            padding: 15px 16px 15px 14px;
+                            color: #000;
+                            &:hover {
+                                background-color: #f8f9fa;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .logos {
+            li {
+                display: inline-block;
+                margin-left: 9px;
+                .icon {
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    &.icon-facebook {
+                        background: url(/assets/i/f-grey.svg) left center no-repeat;
+                        background-size: 100%;
+                    }
+                    &.icon-camera {
+                        background: url(/assets/i/camera.svg) left center no-repeat;
+                        background-size: 100%;
+                    }
+                    &.icon-twitter {
+                        background: url(/assets/i/twitter-grey.svg) left center no-repeat;
+                        background-size: 100%;
+                    }
+                    &.icon-in {
+                        background: url(/assets/i/in-grey.svg) left center no-repeat;
+                        background-size: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

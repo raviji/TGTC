@@ -1,0 +1,106 @@
+<div class="main-content">
+  <div class="top-bg">
+    <div class="max-1156">
+      <app-sd-header-non-login></app-sd-header-non-login>
+      
+      <div class="banner"
+        *ngIf="dataList">
+        <div class="flex">
+          <div class="txt-box">
+            <h2 class="title">{{dataListShown['banner']['title']}}</h2>
+            <div class="crums">
+              <ul>
+                <li><a [routerLink]="['/landing']" class="navs">Home</a></li>
+                <li><span class="right-arrow"></span><a [routerLink]="['/landing/more-api-page']" class="navs">API Product</a></li>
+                <li><span class="right-arrow"></span><a href="javascript:;" class="navs">{{dataListShown['banner']['title']}}</a></li>
+              </ul>
+            </div>
+            <p>
+              {{dataListShown['banner']['description']}}
+            </p>
+            <div class="bottom-btn">
+              <a href="javascript:;" class="btn btn-white">
+                Subscribe
+              </a>
+              <a href="javascript:;" class="btn btn-transparent">
+                View Documentation
+              </a>
+            </div>
+          </div>
+          <div class="risk-img">
+            <img src="{{dataListShown['banner']['imgUrl']}}" alt="img">
+          </div>
+        </div>
+      </div>
+      <!-- end .banner -->
+    </div>
+  </div>
+  <!-- end .top-bg -->
+  
+  <div class="tab-boxs">
+    <div class="tab">
+      <a href="javascript:;" class="active"
+        [class.active]="currentTab === 'Description'"
+        (click)="currentTab = 'Description'">
+        Description
+      </a>
+      <a href="javascript:;"
+        [class.active]="currentTab === 'Key Features/Benefits'"
+        (click)="currentTab = 'Key Features/Benefits'">
+        Key Features/Benefits
+      </a>
+      <a href="javascript:;"
+        [class.active]="currentTab === 'API Specification'"
+        (click)="currentTab = 'API Specification'">
+        API Specification
+      </a>
+      <a href="javascript:;"
+        [class.active]="currentTab === 'Pricing'"
+        (click)="currentTab = 'Pricing'">
+        Pricing
+      </a>
+    </div>
+    <!-- end .tab -->
+    <div class="tab-body"
+      *ngIf="dataList">
+      <div class="tab-panel"
+        *ngIf="currentTab === 'Description'">
+        <app-sd-detail-tab-description
+          [dataList]="dataListShown['description']">
+        </app-sd-detail-tab-description>
+      </div>
+      <!-- end .tab-panel -->
+      <div class="tab-panel"
+        *ngIf="currentTab === 'Key Features/Benefits'">
+        <app-sd-detail-tab-key-features
+          [dataList]="dataListShown['keyFeaturesBenefits']">
+        </app-sd-detail-tab-key-features>
+      </div>
+      <!-- end .tab-panel -->
+      
+      <div class="tab-panel"
+        *ngIf="currentTab === 'API Specification'">
+        <app-sd-detail-tab-api-specification
+          [dataList]="dataListShown['apiSpecification']"
+          [dataListDropdown]="dataListDropdown"
+          [isLoggedIn]="false">
+        </app-sd-detail-tab-api-specification>
+      </div>
+      <!-- end .tab-panel -->
+
+      <div class="tab-panel"
+        *ngIf="currentTab === 'Pricing'">
+        <app-sd-detail-tab-pricing
+          [dataList]="dataListShown['pricing']"
+          [isLoggedIn]="false">
+        </app-sd-detail-tab-pricing>
+      </div>
+      <!-- end .tab-panel -->
+    </div>
+    <!-- end .tab-body -->
+  </div>
+  <!-- end .tab-boxs -->
+  
+  <app-sd-footer-non-login></app-sd-footer-non-login>
+</div>
+<!--end .main-content-->

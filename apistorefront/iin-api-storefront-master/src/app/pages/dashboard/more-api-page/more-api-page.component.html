@@ -1,0 +1,42 @@
+<app-sd-left-sidebar
+  [pageType]="'dashboard-page'">
+</app-sd-left-sidebar>
+<div class="right-content"
+   appScrollTracker (scrolled)="updateScrollPos($event)">
+  <app-sd-header-login></app-sd-header-login>
+  
+  <div class="banner">
+    <div class="back">
+      <a [routerLink]="['/dashboard']" class="btn-back">Back To Dashboard</a>
+    </div>
+    <div class="txt-box">
+      <h2 class="title">API Product</h2>
+      <p>
+          We has been growing alongside with our clients with the spirit to provide excellent services for our 
+          clients. With years of experience, IINAPI is powered by trustworthy data that capable to
+          understand the worldwide market like no other.
+      </p>
+      <div class="search">
+        <div class="inputs">
+          <input type="text" placeholder="Search API.."
+            [(ngModel)]="searchText"/>
+        </div>
+        <a href="javascript:;" class="btn-search">
+          <span>Search</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- end .banner -->
+
+  <app-sd-list-more-api
+    *ngIf="dataList"
+    [dataList]="dataList['More API']"
+    [searchText]="searchText"
+    [showLoadMore]="showLoadMore"
+    [isLoggedIn]="isLoggedIn">
+  </app-sd-list-more-api>
+  
+  <app-sd-footer-login></app-sd-footer-login>
+</div>
+<!--end .right-content-->

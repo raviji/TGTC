@@ -1,0 +1,63 @@
+@import '../../../../styles/variables';
+
+.banner {
+  min-height: 392px;
+  background-image: linear-gradient(147deg, $darkBlue 0%, $blueTextColor 100%);
+  padding: 32px 34px 0 45px;
+  &.h-227 {
+    min-height: 227px;
+  }
+    .back {
+      margin-bottom: 16px;
+      .btn-back {
+      color: $white;
+      font-size: 16px;
+      background: url(/assets/i/arrow-left-white.svg) left center no-repeat;
+      background-size: 6px 12px;
+      padding-left: 33px;
+      &:hover {
+        opacity: 0.85;
+      }
+      }
+    }
+    .flex {
+      display: flex;
+    -webkit-display: flex;
+    -webkit-justify-content: space-between;
+      justify-content: space-between;
+    }
+    .txt-box {
+      margin-right: 43px;
+      flex: 1;
+      .title {
+      color: $white;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 37px;
+      text-transform: uppercase;
+      }
+      .bottom-btn {
+          padding-top: 0;
+        .btn {
+        width: 216px;
+        height: 47px;
+        border: 1px solid #dbdded;
+        background-color: $white;
+        text-transform: inherit;
+        padding: 0;
+        line-height: 45px;
+        color: $darkBlue;
+        font-family: "ProximaNovaRegular";
+        .icon-book {
+          display: inline-block;
+          width: 16px;
+          height: 20px;
+          background: url(/assets/i/icon-book.svg) no-repeat;
+          background-size: 100%;
+          float: left;
+          margin: 14px 0 0 10px;
+        }
+        }
+      }
+    }
+}

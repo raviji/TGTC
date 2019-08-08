@@ -1,0 +1,72 @@
+@import '../../../../../styles/variables';
+
+//.question-content
+.question-content {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    .items {
+        width: calc(50% - 40px);
+        margin-bottom: 55px;
+        margin-right: 40px;
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+        .title {
+            color: #5b5b5b;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: left;
+            .num {
+                font-weight: 300;
+            }
+        }
+        .txt {
+            color: #4a4a4a;
+            font-size: 20px;
+            margin-bottom: 15px;
+            display: inline-block;
+            vertical-align: bottom;
+            margin-left: 8px;
+        }
+        .question-list {
+            li {
+                margin-bottom: 15px;
+                line-height: 63px;
+                display: flex;
+                align-content: center;
+                justify-content: space-between;
+                border-radius: 11px;
+                border: 2px solid #f5f5f5;
+                background-color: #ffffff;
+                padding: 0 10px 0 5px;
+                .lefts {
+                    .info {
+                        background: url(/assets/i/information.svg) center center no-repeat;
+                        background-size: 24px;
+                        width: 26px;
+                        height: 26px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    .txt {
+                        color: #4a4a4a;
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 27px;
+                    }
+                }
+                .rights {
+                    .btn-add {
+                        background: url(/assets/i/plus.svg) center center no-repeat;
+                        background-size: 17px;
+                        width: 24px;
+                        height: 24px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<app-sd-left-sidebar
+  [pageType]="'dashboard-page'">
+</app-sd-left-sidebar>
+<div class="right-content">
+  <app-sd-header-login></app-sd-header-login>
+  
+  <app-sd-dashboard-banner
+    *ngIf="dataList"
+    [currentTab]="currentTab"
+    (changeTab)="changeTab($event)"
+    [dataList]="dataList['Connected Apps']">
+  </app-sd-dashboard-banner>
+
+  <div class="tab-boxs"
+    *ngIf="currentTab === 'Subscribed API'">
+    <app-sd-dashboard-subscribed-api
+      *ngIf="dataList"
+      [dataList]="dataList['Subscribed API']">
+    </app-sd-dashboard-subscribed-api>
+  </div>
+  <!-- end .tab-boxs -->
+  
+  <div class="tab-boxs"
+    *ngIf="currentTab === 'Recommended API'">
+    <app-sd-dashboard-recommended-api
+      *ngIf="dataList"
+      [dataList]="dataList['Recommended API']">
+    </app-sd-dashboard-recommended-api>   
+  </div>
+  <!-- end .tab-boxs -->
+  
+  <app-sd-footer-login></app-sd-footer-login>
+</div>
+<!--end .right-content-->

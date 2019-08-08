@@ -1,0 +1,55 @@
+{
+  "Survey": [
+    {
+      "title": "What is the purpose of you visiting this website?",
+      "selectedOption": "",
+      "options": [
+        {
+          "name": "Finding API"
+        },
+        {
+          "name": "Learning API"
+        },
+        {
+          "name": "I Have No Idea"
+        }
+      ]
+    },
+    {
+      "title": "Are you interested with Paying API?",
+      "selectedOption": "",
+      "options": [
+        {
+          "name": "I am looking for a free one"
+        },
+        {
+          "name": "I am looking for a paid one"
+        },
+        {
+          "name": "I search for paid monthly"
+        },
+        {
+          "name": "I am looking for an annual fee"
+        }
+      ]
+    },
+    {
+      "title": "How Big Is Your Company?",
+      "selectedOption": "",
+      "options": [
+        {
+          "name": "5 - 10 Persons"
+        },
+        {
+          "name": "10 - 50 Persons"
+        },
+        {
+          "name": "50 - 100 Persons"
+        },
+        {
+          "name": "> 100 Persons"
+        }
+      ]
+    }
+  ]
+}

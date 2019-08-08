@@ -1,0 +1,47 @@
+<div class="main-content"
+   appScrollTracker (scrolled)="updateScrollPos($event)">
+  <div class="top-bg">
+    <div class="max-1156">
+      <app-sd-header-non-login></app-sd-header-non-login>
+    
+      <div class="banner">
+        <div class="txt-box">
+          <h2 class="title">API Product</h2>
+          <div class="crums">
+            <ul>
+              <li><a [routerLink]="['/landing']" class="navs">Home</a></li>
+              <li><span class="right-arrow"></span><a href="javascript:;" class="navs">API Product</a></li>
+            </ul>
+          </div>
+          <p>
+              We has been growing alongside with our clients with the spirit to provide excellent services for our 
+              clients. With years of experience, IINAPI is powered by trustworthy data that capable to
+              understand the worldwide market like no other.
+          </p>
+          <div class="search">
+            <div class="inputs">
+              <input type="text" placeholder="Search API.."
+                [(ngModel)]="searchText"/>
+            </div>
+            <a href="javascript:;" class="btn-search">
+              <span>Search</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- end .banner -->
+    </div>
+  </div>
+  <!-- end .top-bg -->
+
+  <app-sd-list-more-api
+    *ngIf="dataList"
+    [dataList]="dataList['More API']"
+    [searchText]="searchText"
+    [showLoadMore]="showLoadMore"
+    [isLoggedIn]="isLoggedIn">
+  </app-sd-list-more-api>
+  
+  <app-sd-footer-non-login></app-sd-footer-non-login>
+</div>
+<!--end .main-content-->

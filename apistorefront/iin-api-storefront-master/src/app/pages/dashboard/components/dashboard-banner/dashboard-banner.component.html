@@ -1,0 +1,27 @@
+<div class="dash-header">
+  <h2 class="title">DASHBOARD</h2>
+  <div class="tag-box"
+    *ngIf="dataList">
+    <a href="javascript:;" class="tag">
+      <i class="icon-app"></i>{{dataList.length}} Apps Connected
+    </a>
+    <a href="javascript:;" class="tag border-radius"
+      *ngFor="let item of dataList">
+      {{item['name']}}
+    </a>
+    <a href="javascript:;" class="icon-add"></a>
+  </div>
+  <div class="tabs">
+    <a href="javascript:;" class="tab"
+      [class.active]="currentTab === 'Subscribed API'"
+      (click)="clickTab('Subscribed API')">
+      Subscribed API
+    </a>
+    <a href="javascript:;" class="tab"
+      [class.active]="currentTab === 'Recommended API'"
+      (click)="clickTab('Recommended API')">
+      Recommended API
+    </a>
+  </div>
+</div>
+<!-- end .dash-header -->

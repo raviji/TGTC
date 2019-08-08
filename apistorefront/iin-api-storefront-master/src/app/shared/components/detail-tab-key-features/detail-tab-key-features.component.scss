@@ -1,0 +1,36 @@
+@import '../../../../styles/variables';
+
+.group {
+  margin-bottom: 40px;
+  .tit {
+    margin-bottom: 22px;
+    height: 71px;
+    color: $black;
+    font-size: 19px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    -webkit-display: flex;
+    span {
+      padding-left: 28px;
+      line-height: 71px;
+    }
+    .icon {
+      width: 71px;
+      height: 71px;
+      display: inline-block;
+    }
+    .icon-id {
+      background: url(/assets/i/icon-id.svg) no-repeat;
+      background-size: 62px 71px;
+    }
+    .icon-payment {
+      background: url(/assets/i/icon-payment.svg) no-repeat;
+      background-size: 100%;
+    }
+    .icon-timetable {
+      background: url(/assets/i/icon-timetable.svg) no-repeat;
+      background-size: 100%;
+    }
+  }
+}

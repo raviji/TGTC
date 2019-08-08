@@ -1,0 +1,31 @@
+<div class="error-bar"
+  *ngIf="showError">
+  <span class="txt">
+    Invalid email or password
+  </span>
+  <a href="javascript:;" class="btn-close"
+    (click)="showError = false">
+  </a>
+</div>
+<form [formGroup]="formGroup" class="login-form">
+  <div class="inputs"
+    [ngClass]="{'error': submitted && f.email.errors}">
+    <input type="email" placeholder="Email"
+      formControlName="email"/>
+  </div>
+  <div class="inputs"
+    [ngClass]="{'error': submitted && f.password.errors}">
+    <input type="password" placeholder="Password"
+      formControlName="password"/>
+  </div>
+  <div class="check-bar flex-grid">
+    <div class="checkbox-normal">
+      <input type="checkbox" id="checkme"/>
+      <label for="checkme">Remember me</label>
+    </div>
+    <a [routerLink]="['/forgot-password']" class="blue-links">Forgot Password?</a>
+  </div>
+  <!--end .check-bar-->
+  <a href="javascript:;" class="btn btn-blue" (click)="clickLogin()">LOG IN</a>
+</form>
+<!--end .login-form-->

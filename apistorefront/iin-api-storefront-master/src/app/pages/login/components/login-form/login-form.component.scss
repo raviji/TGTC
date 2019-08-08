@@ -1,0 +1,53 @@
+@import '../../../../../styles/variables';
+.error-bar {
+    margin-bottom: 30px;
+    height: 77px;
+    border-radius: 5px;
+    background-color: #ec6568;
+    padding: 0 21px 0 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .txt {
+        color: #ffffff;
+        font-size: 16px;
+    }
+    .btn-close {
+        background: url(/assets/i/white-close.svg) center center no-repeat;
+        background-size: 12px auto;
+        width: 18px;
+        height: 18px;
+    }
+}
+.inputs {
+    margin-bottom: 11px;
+
+    
+}
+.check-bar {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.btn-blue {
+    background-color: #0069a3;
+    width: 100%;
+}
+.blue-links {
+    color: $darkBlue;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+::ng-deep ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+  }

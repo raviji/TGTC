@@ -1,0 +1,33 @@
+<div class="tab-contents">
+  <div class="info-row">
+    <div class="info-title">
+      API Visibility
+    </div>
+    <div class="grey-txt">
+      Switching your API visibility to Public makes is searchable and accessible to everyone.
+    </div>  
+    <div class="choose-boxs">
+      <div class="checkbox-wrap ">
+        <input type="checkbox" id="check-apiVisibility"
+          [(ngModel)]="apiVisibility"/>
+        <label for="check-apiVisibility">
+          {{apiVisibility ? 'PUBLIC' : 'PRIVATE'}}
+        </label>
+      </div>
+    </div>
+  </div>
+  <!--end .info-row-->
+</div>
+<!--end .tab-contents-->
+
+<div class="bottom-btn">
+  <a href="javascript:;" class="btn btn-blue-border"
+    (click)="previous()">
+    PREVIOUS
+  </a>
+  <a href="javascript:;" class="btn btn-blue"
+    (click)="next()">
+    Save
+  </a>
+</div>
+<!--end .bottom-btn-->

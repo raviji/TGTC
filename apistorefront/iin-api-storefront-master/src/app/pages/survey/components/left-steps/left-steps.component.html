@@ -1,0 +1,29 @@
+<div class="left-fixed">
+  <h2 class="title">IINAPI</h2>
+  <h3 class="sm-title">Search Your Business Type API</h3>
+  <div class="txt">
+    <p>
+      Congratulations, you have been registered as an 
+      IINAPI user!
+    </p>
+    <p>
+      Before using IINAPI, please enter the API category 
+      that you need. so we can recommend a list of 
+      APIs that are suitable for you
+    </p>
+  </div>
+  <div class="progress-box">
+    <div class="tips">Step {{currentIndex + 1}} of {{dataList.length}}</div>
+    <div class="progress">
+      <div [style.width]="((currentIndex + 1) / dataList.length) * 100 + '%'" class="percent"></div>
+    </div>
+  </div>
+  <div class="bottom-btn">
+    <a href="javascript:;" class="btn btn-blue"
+      [class.btn-blue-border]="dataList[currentIndex]['selectedOption'] === ''"
+      (click)="next()">
+      Next
+    </a>
+  </div>
+</div>
+<!-- end .left-fixed -->

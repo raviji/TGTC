@@ -1,0 +1,63 @@
+<h2 class="title">Contact Us</h2>
+<div class="txt-p">
+  <p>
+    The most happiest time of the day!. Suspendisse condimentum porttitor cursus. Duis nec nullaturpis. Nulla 
+    lacinia laoreet odio, non lacinia nisl malesuada vel. Aenean malesuada fermentum bibendum.
+  </p>
+</div>
+<form class="contact-form" [formGroup]="formGroup">
+  <div class="lefts">
+    <div class="row-line">
+      <div class="label-txt">
+        Name
+      </div>
+      <div class="inputs"
+        [ngClass]="{'error': submitted && f.name.errors}">
+        <input type="text"  placeholder="Enter your Name"
+          formControlName="name"/>
+      </div>
+    </div>
+    <!--end .row-line-->
+    <div class="row-line">
+      <div class="label-txt">
+        Email
+      </div>
+      <div class="inputs"
+        [ngClass]="{'error': submitted && f.email.errors}">
+        <input type="email"  placeholder="Enter your Email"
+          formControlName="email"/>
+      </div>
+    </div>
+    <!--end .row-line-->
+    <div class="row-line">
+      <div class="label-txt">
+        Subject
+      </div>
+      <div class="inputs"
+        [ngClass]="{'error': submitted && f.subject.errors}">
+        <input type="text"  placeholder="Subject..."
+          formControlName="subject"/>
+      </div>
+    </div>
+    <!--end .row-line-->
+  </div>
+  <div class="rights">
+    <div class="row-line">
+      <div class="label-txt">
+        Message
+      </div>
+      <div class="textareas support-small"
+        [ngClass]="{'error': submitted && f.message.errors}">
+        <textarea placeholder="Enter your Message"
+          formControlName="message">
+        </textarea>
+      </div>
+    </div>
+    <!--end .row-line-->
+    <a href="javascript:;" class="btn btn-blue"
+      (click)="sendMessage()">
+      SEND MESSAGE
+    </a>
+  </div>
+</form>
+<!--end .contact-form-->

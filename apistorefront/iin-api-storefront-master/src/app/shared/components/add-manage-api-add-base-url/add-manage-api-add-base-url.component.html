@@ -1,0 +1,196 @@
+<div class="tab-contents"
+  [class.add]="pageType === 'add'">
+  <form [formGroup]="formGroup">
+    <div class="info-row">
+      <div class="info-title">
+        Base URL <span class="red">*</span>
+      </div>
+      <div class="grey-txt">
+        All API endpoints are relative to the base URL
+      </div>
+      <div class="inputs"
+        [ngClass]="{'error': (submitted || saved) && (f.baseURL.errors || !validationService.checkURL(f.baseURL.value))}">
+        <input type="text" placeholder="http://"
+          formControlName="baseURL"/>
+      </div>
+      <!--<a href="javascript:;" class="btn btn-blue"
+        (click)="clickSave()">
+        Save
+      </a>-->
+    </div>
+    <!--end .info-row-->
+    <div class="info-row">
+      <div class="info-title">
+        Firewall Settings
+      </div>
+      <div class="grey-txt">
+        For security, you should protect your API by blocking requests that are not from the IINAPI infrastructure. IINAPI adds the "X-IINAPI-
+        Proxy-Secret" header on every request. This header has a unique value for each API. if this header is missing or has a different value 
+        from the value specified below, you should assume the request is not from IINAPI infrastructure.
+        <div>The header for the API is:</div>
+      </div>
+      <div class="inputs red-inputs copy-input"
+        [ngClass]="{'error': submitted && f.baseURLFirewallSettings.errors}">
+        <input type="text" placeholder="Enter BASE Url to get the Header Value"
+          formControlName="baseURLFirewallSettings"/>
+        <a href="javascript:;" class="btn-copy"
+          *ngIf="!f.baseURLFirewallSettings.value">
+        </a>
+      </div>
+      <div class="grey-txt">
+        In addition, you can whitelist the following IPs to allow requests only from IINAPI (to ensure requests have been authenticated):
+      </div>
+      <a href="javascript:;" class="blue-links right-arrow">View IINAPI IPs</a>
+    </div>
+    <!--end .info-row-->
+    <div class="info-row">
+      <div class="info-title">
+        Authentication <span class="red">*</span>
+      </div>
+      <div class="grey-txt">
+        IINAPI implements a single secret key per developer application across all APIs to minimize friction in testing and implementing APIs.
+      </div>
+      <div ngbDropdown class="d-inline-block"
+        *ngIf="dataListDropdown"
+        [ngClass]="{ 'error': submitted && (dataList['authentication'] === '')}"
+        [class.default-text]="dataList['authentication'] === ''">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>
+          {{dataList['authentication'] !== '' ? dataList['authentication'] : 'Select Authentication'}}
+        </button>
+        <div ngbDropdownMenu>
+          <button ngbDropdownItem class="dropdown-item"
+            *ngFor="let optionItem of dataListDropdown['authenticationDropdown']"
+            (click)="dataList['authentication'] = optionItem['option']">
+            {{optionItem['option']}}
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--end .info-row-->
+    <div class="info-row">
+      <div class="info-title">
+        Transformations
+      </div>
+      <div class="grey-txt">
+        Secret request headers and parameters will be transparently added to every request made by a client. Client implementations, and so 
+        developers consuming the API, will be unaware of secret parameters or headers and their values. If your API requires authentication but you 
+        want developers to use IINAPI's authentication, you can specify authentication parameters here.
+      </div>
+      <a href="javascript:;" class="blue-links add-link"
+        (click)="clickAddSecretHeaderOrParameter()">
+        Add Secret Header or Parameter
+      </a>
+      
+      <div class="table-data little-short"
+        *ngIf="dataList['secretHeaderOrParameterList'].length > 0">
+        <div class="row-th">
+          <div class="col-td width20">
+            <div class="spacing">No.</div>
+          </div>
+          <div class="col-td">
+            <div class="spacing">Key</div>
+          </div>
+          <div class="col-td">
+            <div class="spacing">Value</div>
+          </div>
+          <div class="col-td width20"
+            *ngIf="dataList['secretHeaderOrParameterList'].length !== 0">
+            <div class="spacing">
+              <a href="javascript:;" class="icon-tool btn-edit"></a>
+               <a href="javascript:;" class="icon-tool btn-trash"></a>
+            </div>
+          </div>
+        </div>
+        <div class="row-td"
+          *ngFor="let item of dataList['secretHeaderOrParameterList'];let i = index">
+          <div class="col-td width20">
+            <div class="spacing">#{{i + 1}}</div>
+          </div>
+          <div class="col-td ">
+            <div class="spacing">{{item['key']}}</div>
+          </div>
+          <div class="col-td ">
+            <div class="spacing">{{item['value']}}</div>
+          </div>
+          <div class="col-td width20">
+            <div class="spacing">
+              <a href="javascript:;" class="icon-tool btn-edit"
+                (click)="editSecretHeaderOrParameterItem(i)">
+              </a>
+              <a href="javascript:;" class="icon-tool btn-trash"
+                (click)="deleteSecretHeaderOrParameterItem(i)">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end .table-data-->
+    </div>
+    <!--end .info-row-->
+  </form>
+  <div class="add-wrapper">
+    <div class="info-row mb-40">
+      <div class="info-title">
+        API Visibility
+      </div>
+      <div class="grey-txt">
+        Switching your API visibility to Public makes is searchable and accessible to everyone.
+      </div>  
+      <div class="choose-boxs">
+        <div class="checkbox-wrap ">
+          <input type="checkbox" id="check-apiVisibility-1" 
+            [(ngModel)]="dataList['apiVisibility']"/>
+          <label for="check-apiVisibility-1">
+            {{dataList['apiVisibility'] ? 'PUBLIC' : 'PRIVATE'}}
+          </label>
+        </div>
+      </div>
+    </div>
+    <!--end .info-row-->
+    <div class="info-row mb-10">
+      <div class="info-title">
+        Transfer Ownership
+      </div>
+      <div class="grey-txt">
+        Transfer Ownership of this API to another IINAPI user.
+      </div>  
+      <a href="javascript:;" class="btn btn-red">TRANSFER THIS API</a>
+    </div>
+    <!--end .info-row-->
+    <div class="info-row">
+      <div class="info-title">
+        Permanently Delete
+      </div>
+      <div class="grey-txt">
+        Permanently delete this API. This action is not reversible.
+      </div>
+      <a href="javascript:;" class="btn btn-red"
+        (click)="deleteAPI()">
+        DELETE
+      </a>
+    </div>
+    <!--end .info-row-->
+  </div>
+  <!--end .add-wrapper-->
+</div>
+<!--end .tab-contents-->
+
+<div class="bottom-btn"
+  *ngIf="pageType === 'add'">
+  <a href="javascript:;" class="btn btn-blue-border"
+    (click)="previous()">
+    PREVIOUS
+  </a>
+  <a href="javascript:;" class="btn btn-blue"
+    (click)="next()">
+    NEXT
+  </a>
+</div>
+<!--end .bottom-btn-->
+
+<app-sd-modal-windows
+  *ngIf="modalData['name'] !== ''"
+  [dataListDropdown]="dataListDropdown"
+  [modalData]="modalData"
+  (saveSecretHeaderOrParameter)="saveSecretHeaderOrParameter($event)">
+</app-sd-modal-windows>

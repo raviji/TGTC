@@ -1,0 +1,232 @@
+<div class="filter-tab">
+  <div class="left">
+    <a href="javascript:;" class="btn-gray"><span class="filter">Filter</span></a>
+    <a href="javascript:;" class="w-221 btn-darkred"
+      *ngIf="showAndriodFilter"
+      (click)="deleteFilter('Andriod')">
+      com.android.finance
+      <i class="icon-close close-red"></i>
+    </a>
+    <a href="javascript:;" class="w-221 btn-blue"
+      *ngIf="showPaymentFilter"
+      (click)="deleteFilter('Payment')">
+      com.payment.finance
+      <i class="icon-close close-blue"></i>
+    </a>
+  </div>
+  <div class="date">
+    <div class="date-row">
+      <div class="date-module" (clickOutside)="clickOutdie()">
+        <div class="date-btn"
+          (click)="showCalendar = !showCalendar;changeData();">
+          <i class="icon-date"></i>
+          <div class="value-txt">
+            <div class="year-bold">This Year</div>
+            <div class="date-from-to">
+              {{fromDateString}} - {{toDateString}}
+            </div>
+          </div>
+          <!--end .value-txt-->
+          <span class="btn-drop"></span>
+        </div>
+        <!--end .date-btn-->
+        
+        <ngb-datepicker #dp (select)="onDateSelection($event)" [displayMonths]="2" [dayTemplate]="t" outsideDays="hidden"
+          *ngIf="showCalendar">
+        </ngb-datepicker>
+
+        <ng-template #t let-date let-focused="focused">
+          <span class="custom-day"
+            [class.focused]="focused"
+            [class.range]="isRange(date)"
+            [class.faded]="isHovered(date) || isInside(date)"
+            (mouseenter)="hoveredDate = date"
+            (mouseleave)="hoveredDate = null">
+            {{ date.day }}
+          </span>
+        </ng-template>
+      </div>
+      <!--end .date-module-->
+    </div>
+  </div>
+</div>
+<!-- end .filter-tab -->
+
+<div class="chart-all">
+  <div class="row">
+    <div class="col col-md-12"
+      *ngIf="showAndriodFilter || showPaymentFilter">
+      <div class="chart-boxs">
+        <div class="chart-title">
+          API CALLS
+        </div>
+        <div class="chart-info have-left">
+          <div class="left-txt">
+            NUMBER API CALLS
+          </div>
+          <div class="chart-img">
+            <app-sd-line-chart-double-bigger
+              [showAndriodFilter]="showAndriodFilter"
+              [showPaymentFilter]="showPaymentFilter"
+              [itemData]="dataList['api-calls']">
+            </app-sd-line-chart-double-bigger>
+            <div class="bottom-txt">
+              TIME RANGE
+            </div>
+          </div>
+          <!--end .chart-img-->
+        </div>
+        <!--end .chart-info-->
+      </div>
+      <!--end .chart-boxs-->
+    </div>
+  </div>
+  <!--end .row-->
+  <div class="row">
+    <div class="col col-md-4"
+      *ngIf="showAndriodFilter || showPaymentFilter">
+      <div class="chart-boxs">
+        <div class="chart-title">
+          NO ERROR STATISTIC
+        </div>
+        <div class="little-grey">
+          Users who have no errors
+        </div>
+        <div class="bold-num">
+          {{dataList['no error statistic']['title']}}
+        </div>
+        <div class="chart-info ">
+          <div class="chart-img">
+            <app-sd-line-chart-double
+              [showAndriodFilter]="showAndriodFilter"
+              [showPaymentFilter]="showPaymentFilter"
+              [itemData]="dataList['no error statistic']"
+              [chartType]="'percentage'">
+            </app-sd-line-chart-double>
+            <div class="bottom-txt">
+              TIME RANGE
+            </div>
+          </div>
+          <!--end .chart-img-->
+        </div>
+        <!--end .chart-info-->
+      </div>
+      <!--end .chart-boxs-->
+    </div>
+    <!--end .col-md-4-->
+    <div class="col col-md-8"
+      *ngIf="showAndriodFilter || showPaymentFilter">
+      <div class="chart-boxs">
+        <div class="chart-title">
+          ERROR EVENT TRENDS
+        </div>
+        <div class="two-parent">
+          <div class="items">
+            <div class="little-grey">
+              Error
+            </div>
+            <div class="bold-num">
+              {{dataList['error event trends']['titleError']}}
+            </div>
+            <div class="minu-txt">
+              {{dataList['error event trends']['titleSmallError']}}
+            </div>
+          </div>
+          <div class="items">
+            <div class="little-grey">
+              User affected
+            </div>
+            <div class="bold-num">
+              {{dataList['error event trends']['titleUser affected']}}
+            </div>
+            <div class="minu-txt">
+              {{dataList['error event trends']['titleSmallUser affected']}}
+            </div>
+          </div>
+        </div>
+        
+        <div class="chart-info ">
+          <div class="chart-img">
+            <app-sd-double-bar-chart
+              [showAndriodFilter]="showAndriodFilter"
+              [showPaymentFilter]="showPaymentFilter"
+              [itemData]="dataList['error event trends']">
+            </app-sd-double-bar-chart>
+            <div class="bottom-txt">
+              MONTH
+            </div>
+          </div>
+          <!--end .chart-img-->
+        </div>
+        <!--end .chart-info-->
+      </div>
+      <!--end .chart-boxs-->
+    </div>
+    <!--end .col-md-4-->
+  </div>
+  <!--end .row-->
+  <div class="row">
+    <div class="col col-md-6"
+      *ngIf="showAndriodFilter || showPaymentFilter">
+      <div class="chart-boxs">
+        <div class="chart-title">
+          BILLING
+        </div>
+        <div class="little-grey">
+          Total Billing
+        </div>
+        <div class="bold-num">
+          {{dataList['billing']['title']}}
+        </div>
+        <div class="chart-info ">
+          <div class="chart-img">
+            <app-sd-line-chart-double
+              [showAndriodFilter]="showAndriodFilter"
+              [showPaymentFilter]="showPaymentFilter"
+              [itemData]="dataList['billing']">
+            </app-sd-line-chart-double>
+            <div class="bottom-txt">
+              TIME RANGE
+            </div>
+          </div>
+          <!--end .chart-img-->
+        </div>
+        <!--end .chart-info-->
+      </div>
+      <!--end .chart-boxs-->
+    </div>
+    <!--end.col-->
+    <div class="col col-md-6"
+      *ngIf="showAndriodFilter || showPaymentFilter">
+      <div class="chart-boxs">
+        <div class="chart-title">
+          LATENCY
+        </div>
+        <div class="little-grey">
+          Avg Latency Time
+        </div>
+        <div class="bold-num">
+          {{dataList['latency']['title']}}
+        </div>
+        <div class="chart-info ">
+          <div class="chart-img">
+            <app-sd-line-chart-double
+              [showAndriodFilter]="showAndriodFilter"
+              [showPaymentFilter]="showPaymentFilter"
+              [itemData]="dataList['latency']">
+            </app-sd-line-chart-double>
+            <div class="bottom-txt">
+              TIME RANGE
+            </div>
+          </div>
+          <!--end .chart-img-->
+        </div>
+        <!--end .chart-info-->
+      </div>
+      <!--end .chart-boxs-->
+    </div>
+    <!--end.col-->
+  </div>
+  <!--end .row-->
+</div>
+<!--end .chart-all-->

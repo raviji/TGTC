@@ -1,0 +1,38 @@
+<div class="tab-contents">
+  <div class="tab-boxs ">
+    <h2 class="title">PLANS & PRICING</h2>
+    <p class="txt">Plans are visible on the IINAPI marketplace. Any user can sign into IINAPI and subscribe to your plans.</p>
+    <div class="row-add">
+      <a href="javascript:;" class="btn-add"
+        (click)="clickAddPlanType()">
+        Create Plan
+      </a>
+    </div>
+    <div class="row-plane">
+      <div class="plane"
+        *ngFor="let item of dataList;let i = index">
+        <div class="num">${{item['subscriptionPrice']}}</div>
+        <div class="price">{{item['planName']}}</div>
+        <div class="txt-box">
+          <p>
+            {{item['planDescriptions']}}
+          </p>
+          <a href="javascript:;" class="btn"
+            (click)="clickEditPlanType(i)">
+            EDIT
+          </a>
+        </div>
+      </div>
+      <!-- end .plane -->
+    </div>
+    <!-- end.row-plane -->
+  </div>
+  <!-- end .tab-boxs -->
+</div>
+<!--end .tab-contents-->
+
+<app-sd-modal-windows
+  *ngIf="modalData['name'] !== ''"
+  [modalData]="modalData"
+  (savePlanType)="savePlanType($event)">
+</app-sd-modal-windows>
