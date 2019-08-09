@@ -4,8 +4,6 @@
 /dist
 /tmp
 /out-tsc
-# Only exists if Bazel was run
-/bazel-out
 
 # dependencies
 /node_modules
@@ -29,12 +27,11 @@ speed-measure-plugin.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/*
 
 # misc
 /.sass-cache
 /connect.lock
-#/coverage
+/coverage
 /libpeerconnection.log
 npm-debug.log
 yarn-error.log
@@ -44,8 +41,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-# Firebase
-.firebase/
-.firebaserc
-firebase.json
