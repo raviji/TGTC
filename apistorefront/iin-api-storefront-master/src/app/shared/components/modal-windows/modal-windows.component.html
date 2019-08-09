@@ -28,7 +28,7 @@
       <div class="inputs padding-74"
         [ngClass]="{'error': submitted && f.subscriptionPrice.errors}">
         <input type="text" placeholder="$0" class="text-right"
-          pattern="\$[0-9]+"
+          pattern="\$?[0-9]+"
           formControlName="subscriptionPrice"/>
         <a href="javascript:;" class="icon icon-mins"
           (click)="clickMinus()">
