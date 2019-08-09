@@ -7,7 +7,7 @@
     (click)="showError = false">
   </a>
 </div>
-<form [formGroup]="formGroup" class="login-form">
+<form [formGroup]="formGroup" class="login-form" (keyup.enter)="clickLogin()">
   <div class="inputs"
     [ngClass]="{'error': submitted && f.email.errors}">
     <input type="email" placeholder="Email"
