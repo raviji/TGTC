@@ -28,6 +28,7 @@
       <div class="inputs padding-74"
         [ngClass]="{'error': submitted && f.subscriptionPrice.errors}">
         <input type="text" placeholder="$0" class="text-right"
+          pattern="\$[0-9]+"
           formControlName="subscriptionPrice"/>
         <a href="javascript:;" class="icon icon-mins"
           (click)="clickMinus()">
@@ -45,6 +46,7 @@
       <div class="inputs"
         [ngClass]="{'error': submitted && f.planName.errors}">
         <input type="text" placeholder="Your API's Name"
+          pattern="^\S+(?: \S+)*$"
           formControlName="planName"/>
       </div>
     </div>
@@ -54,6 +56,7 @@
       <div class="textareas"
         [ngClass]="{'error': submitted && f.planDescriptions.errors}">
         <textarea placeholder="Your API's Name" maxlength="200"
+          pattern="^\S+(?: \S+)*$"
           formControlName="planDescriptions">
         </textarea>
       </div>
