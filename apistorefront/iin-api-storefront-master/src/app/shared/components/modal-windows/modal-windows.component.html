@@ -45,7 +45,7 @@
       <label for="">Plan Name <em>*</em></label>
       <div class="inputs"
         [ngClass]="{'error': submitted && f.planName.errors}">
-        <input type="text" placeholder="Your API's Name"
+        <input type="text" placeholder="Your Plan's Name"
           pattern="^\S+(?: \S+)*$"
           formControlName="planName"/>
       </div>
@@ -55,7 +55,7 @@
       <label for="">Plan Descriptions<em>*</em></label>
       <div class="textareas"
         [ngClass]="{'error': submitted && f.planDescriptions.errors}">
-        <textarea placeholder="Your API's Name" maxlength="200"
+        <textarea placeholder="Your Plan's Name" maxlength="200"
           pattern="^\S+(?: \S+)*$"
           formControlName="planDescriptions">
         </textarea>

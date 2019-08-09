@@ -25,6 +25,7 @@
       <div class="inputs"
         [ngClass]="{'error': submitted && f.email.errors}">
         <input type="email"  placeholder="Enter your Email"
+          pattern="^[a-zA-Z0-9.!#$%&’*+=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
           formControlName="email"/>
       </div>
     </div>
