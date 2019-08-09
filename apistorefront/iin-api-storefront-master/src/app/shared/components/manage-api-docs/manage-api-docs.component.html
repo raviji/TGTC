@@ -23,10 +23,9 @@
       <p class="txt">Use this section to provide additional Pdf Documentation of your API and to highlight its benefits and features.</p>
       <div class="file-box">
         <div class="file-img"></div>
-        <p *ngIf="uploadedFile === ''">Drag and drop pdf file here or just click for <em>browse</em> file</p>
-        <p *ngIf="uploadedFile !== ''">{{uploadedFile}}</p>
-        <input type="file" class="input-file" accept=".pdf" #variable
-          (change)="selectFile($event);variable.value='';"/>
+        <p *ngIf="uploadedFile === ''" >Drag and drop pdf file here or just click for <em>browse</em> file</p>
+        <p *ngIf="uploadedFile !== ''" >{{uploadedFile}}</p>
+        <input type="file" class="input-file" accept=".pdf" [title]="uploadedFile? uploadedFile : 'No file selected'" #variable (change)="selectFile($event);variable.value='';"/>
       </div>
     </div>
     <!-- end .group -->

@@ -691,3 +691,12 @@ a:focus {
         margin: 0 25px;
     }
 }
+
+
+//Firefox Browser fixes
+
+@-moz-document url-prefix() {
+    .right-content {
+        height: calc(100% - 140px);
+    }
+  }
