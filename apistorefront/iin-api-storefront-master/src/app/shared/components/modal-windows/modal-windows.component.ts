@@ -91,16 +91,20 @@ export class ModalWindowsComponent implements OnInit {
   clickPlus() {
     if (this.f.subscriptionPrice.value.toString() === '') {
       this.f.subscriptionPrice.setValue('$0');
+    } else if (isNaN(parseInt(this.f.subscriptionPrice.value.toString().replace('$', ''), 10))) {
+      this.f.subscriptionPrice.setValue('$0');
+    } else {
+      this.f.subscriptionPrice.setValue('$' + (parseInt(this.f.subscriptionPrice.value.toString().replace('$', ''), 10) + 1));
     }
-    this.f.subscriptionPrice.setValue('$' + (parseInt(this.f.subscriptionPrice.value.toString().replace('$', ''), 10) + 1));
   }
 
   // click Minus icon
   clickMinus() {
     if (this.f.subscriptionPrice.value.toString() === '') {
       this.f.subscriptionPrice.setValue('$0');
-    }
-    if (parseInt(this.f.subscriptionPrice.value.toString().replace('$', ''), 10) > 0) {
+    } else if (isNaN(parseInt(this.f.subscriptionPrice.value.toString().replace('$', ''), 10))) {
+      this.f.subscriptionPrice.setValue('$0');
+    } else if (parseInt(this.f.subscriptionPrice.value.toString().replace('$', ''), 10) > 0) {
       this.f.subscriptionPrice.setValue('$' + (parseInt(this.f.subscriptionPrice.value.toString().replace('$', ''), 10) - 1));
     }
   }
