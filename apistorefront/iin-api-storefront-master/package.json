@@ -23,7 +23,7 @@
     "@ng-bootstrap/ng-bootstrap": "^4.2.1",
     "bootstrap": "^4.1.1",
     "core-js": "^2.5.4",
-    "d3": "^5.9.7",
+    "d3": "^7.6.1",
     "ng-click-outside": "^4.0.0",
     "ngx-cookie-service": "^2.2.0",
     "ngx-quill": "^7.0.2",
